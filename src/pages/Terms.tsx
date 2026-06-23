@@ -6,7 +6,7 @@ export default function Terms() {
       <nav className="fixed w-full top-0 z-50 bg-[#030712]/90 backdrop-blur-md border-b border-gray-800/80">
         <div className="max-w-4xl mx-auto px-6 py-5">
           <div className="text-2xl font-black tracking-tighter text-white text-center">
-            Crypto<span className="text-emerald-500">Ledger</span>
+            Monde Quotidien
           </div>
         </div>
       </nav>

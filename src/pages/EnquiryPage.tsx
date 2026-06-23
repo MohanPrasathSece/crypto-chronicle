@@ -51,7 +51,7 @@ export default function EnquiryPage() {
               <svg className="w-5 h-5 text-gray-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
             </div>
             <div className="text-2xl font-black tracking-tighter text-white">
-              Crypto<span className="text-emerald-500">Ledger</span>
+              Monde Quotidien
             </div>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300">
