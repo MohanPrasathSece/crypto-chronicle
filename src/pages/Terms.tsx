@@ -6,7 +6,7 @@ export default function Terms() {
       <nav className="fixed w-full top-0 z-50 bg-[#030712]/90 backdrop-blur-md border-b border-gray-800/80">
         <div className="max-w-4xl mx-auto px-6 py-5">
           <div className="text-2xl font-black tracking-tighter text-white text-center">
-            Monde Quotidien
+            CryptomonnaieGrand livre
           </div>
         </div>
       </nav>
@@ -17,7 +17,7 @@ export default function Terms() {
 
         <section className="space-y-6">
           <h2 className="text-2xl font-bold text-white">Acceptation des Conditions</h2>
-          <p>En accédant ou en utilisant Monde Quotidien, vous acceptez d'être lié par ces Conditions Générales. Si vous n'êtes pas d'accord avec une partie des conditions, vous ne pouvez pas accéder au site Web.</p>
+          <p>En accédant ou en utilisant CryptomonnaieGrand livre, vous acceptez d'être lié par ces Conditions Générales. Si vous n'êtes pas d'accord avec une partie des conditions, vous ne pouvez pas accéder au site Web.</p>
 
           <h2 className="text-2xl font-bold text-white">Admissibilité</h2>
           <p>Vous devez avoir au moins 18 ans pour utiliser notre site Web et nos services. En utilisant notre site Web, vous déclarez et garantissez que vous remplissez cette condition.</p>
@@ -38,19 +38,19 @@ export default function Terms() {
           <p>Vous acceptez de ne pas utiliser le site Web à des fins illégales ou de vous engager dans toute activité qui pourrait endommager, désactiver ou altérer nos serveurs ou réseaux. Le scraping, l'exploration de données ou l'extraction de données de notre site Web est strictement interdit sans consentement écrit.</p>
 
           <h2 className="text-2xl font-bold text-white">Propriété Intellectuelle</h2>
-          <p>Tout le contenu de ce site Web, y compris le texte, les graphiques, les logos et les logiciels, est la propriété de Monde Quotidien ou de ses fournisseurs de contenu et est protégé par les lois sur la propriété intellectuelle.</p>
+          <p>Tout le contenu de ce site Web, y compris le texte, les graphiques, les logos et les logiciels, est la propriété de CryptomonnaieGrand livre ou de ses fournisseurs de contenu et est protégé par les lois sur la propriété intellectuelle.</p>
 
           <h2 className="text-2xl font-bold text-white">Exactitude des Informations</h2>
           <p>Bien que nous nous efforcions de fournir des informations précises et à jour, nous ne faisons aucune garantie ou représentation concernant l'exhaustivité, la fiabilité ou l'exactitude du contenu de notre site Web.</p>
 
           <h2 className="text-2xl font-bold text-white">Limitation de Responsabilité</h2>
-          <p>En aucun cas Monde Quotidien, ses administrateurs, employés ou sociétés affiliées ne seront responsables des dommages directs, indirects, accessoires, spéciaux ou consécutifs découlant de ou liés de quelque manière que ce soit à votre utilisation de ce site Web.</p>
+          <p>En aucun cas CryptomonnaieGrand livre, ses administrateurs, employés ou sociétés affiliées ne seront responsables des dommages directs, indirects, accessoires, spéciaux ou consécutifs découlant de ou liés de quelque manière que ce soit à votre utilisation de ce site Web.</p>
 
           <h2 className="text-2xl font-bold text-white">Indemnisation</h2>
-          <p>Vous acceptez d'indemniser et de dégager de toute responsabilité Monde Quotidien de toute réclamation, dommage, perte ou dépense découlant de votre utilisation du site Web ou de votre violation de ces Conditions.</p>
+          <p>Vous acceptez d'indemniser et de dégager de toute responsabilité CryptomonnaieGrand livre de toute réclamation, dommage, perte ou dépense découlant de votre utilisation du site Web ou de votre violation de ces Conditions.</p>
 
           <h2 className="text-2xl font-bold text-white">Liens Tiers</h2>
-          <p>Notre site Web peut contenir des liens vers des sites Web ou des services tiers qui ne sont ni détenus ni contrôlés par Monde Quotidien. Nous n'assumons aucune responsabilité quant au contenu, aux politiques de confidentialité ou aux pratiques de tout site Web ou service tiers.</p>
+          <p>Notre site Web peut contenir des liens vers des sites Web ou des services tiers qui ne sont ni détenus ni contrôlés par CryptomonnaieGrand livre. Nous n'assumons aucune responsabilité quant au contenu, aux politiques de confidentialité ou aux pratiques de tout site Web ou service tiers.</p>
 
           <h2 className="text-2xl font-bold text-white">Référence à la Politique de Confidentialité</h2>
           <p>Votre utilisation du site Web est également régie par notre Politique de Confidentialité. Veuillez consulter notre Politique de Confidentialité pour comprendre nos pratiques concernant vos données personnelles.</p>
