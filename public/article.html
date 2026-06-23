@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bitcoin Surges Above Key Resistance as Institutional Demand Accelerates — CryptoLedger</title>
+<meta name="description" content="Bitcoin breaks past a critical resistance level as spot ETF inflows, whale accumulation, and macro tailwinds drive renewed institutional demand. In-depth analysis, on-chain data, and expert commentary." />
+<meta name="keywords" content="Bitcoin, BTC, Crypto, Ethereum, ETF, Institutional Investment, Blockchain, Web3, Federal Reserve, Regulation, On-chain" />
+<meta name="author" content="Eleanor Whitfield" />
+<link rel="canonical" href="/article.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Bitcoin Surges Above Key Resistance as Institutional Demand Accelerates" />
+<meta property="og:description" content="Inside the rally: ETF flows, on-chain signals, regulation, and what analysts expect next." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=1600&q=80" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Bitcoin Surges Above Key Resistance as Institutional Demand Accelerates" />
+<meta name="twitter:description" content="ETF inflows, whale accumulation, macro tailwinds — what's driving the rally." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=1600&q=80" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Bitcoin Surges Above Key Resistance as Institutional Demand Accelerates",
+  "image": ["https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=1600&q=80"],
+  "datePublished": "2026-06-23T08:15:00+00:00",
+  "dateModified": "2026-06-23T11:42:00+00:00",
+  "author": {"@type":"Person","name":"Eleanor Whitfield","url":"/authors/eleanor-whitfield"},
+  "publisher": {"@type":"Organization","name":"CryptoLedger","logo":{"@type":"ImageObject","url":"/logo.png"}},
+  "description": "Bitcoin breaks past a critical resistance level as spot ETF inflows and institutional demand accelerate."
+}
+</script>
+<style>
+:root{
+  --bg:#FFFFFF;--section:#FAFAFA;--border:#E6E6E6;
+  --text:#111111;--text-2:#555555;--muted:#777777;
+  --accent:#0A84FF;--neg:#D93025;--pos:#188038;
+  --serif:'Playfair Display', Georgia, serif;
+  --sans:'Inter', 'Source Sans 3', system-ui, sans-serif;
+  --max:1200px;--article:740px;--side:320px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+body.dark{--bg:#0e0e10;--section:#16161a;--border:#26262b;--text:#f2f2f2;--text-2:#b8b8b8;--muted:#8c8c8c}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* progress */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:9999;transition:width .1s linear}
+
+/* top bar */
+.topbar{background:var(--section);border-bottom:1px solid var(--border);font-size:12px;color:var(--text-2)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:36px;gap:16px}
+.topbar .left{display:flex;gap:18px;align-items:center}
+.topbar .status{display:inline-flex;align-items:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--pos);display:inline-block}
+.topbar .right{display:flex;gap:16px;align-items:center}
+.topbar a:hover{color:var(--accent)}
+
+/* ticker */
+.ticker{border-bottom:1px solid var(--border);background:var(--bg);overflow:hidden}
+.ticker-inner{display:flex;align-items:center;height:38px;gap:24px;white-space:nowrap}
+.tk-label{background:var(--neg);color:#fff;font-weight:700;font-size:11px;letter-spacing:.12em;padding:6px 12px;flex-shrink:0}
+.tk-track{display:flex;gap:40px;animation:tick 45s linear infinite;font-size:13px;color:var(--text-2)}
+.tk-track span b{color:var(--text);font-weight:600;margin-right:6px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* header */
+header.site{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--border);z-index:100}
+.masthead{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 0;gap:16px}
+.masthead .left,.masthead .right{display:flex;gap:18px;align-items:center}
+.masthead .right{justify-content:flex-end}
+.logo{font-family:var(--serif);font-weight:900;font-size:34px;letter-spacing:-.5px;text-align:center}
+.logo .tld{color:var(--accent)}
+.icon-btn{width:36px;height:36px;display:inline-grid;place-items:center;border:1px solid transparent;border-radius:4px;cursor:pointer;background:none;color:var(--text)}
+.icon-btn:hover{background:var(--section);border-color:var(--border)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;font-size:13px;font-weight:600;font-family:var(--sans);border:1px solid var(--text);background:var(--text);color:var(--bg);cursor:pointer;transition:all .15s}
+.btn:hover{background:transparent;color:var(--text)}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--border)}
+.btn.ghost:hover{border-color:var(--text)}
+
+nav.primary{border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+nav.primary ul{list-style:none;display:flex;gap:0;justify-content:center;flex-wrap:wrap}
+nav.primary li a{display:block;padding:13px 16px;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--text);position:relative}
+nav.primary li a:hover{color:var(--accent)}
+nav.primary li a.active::after{content:'';position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--accent)}
+
+/* mini crypto ticker */
+.miniprices{border-bottom:1px solid var(--border);background:var(--section);overflow:hidden}
+.miniprices .row{display:flex;gap:28px;padding:10px 0;font-size:12.5px;overflow-x:auto;scrollbar-width:none}
+.miniprices .row::-webkit-scrollbar{display:none}
+.miniprices .coin{display:inline-flex;gap:6px;align-items:center;flex-shrink:0}
+.miniprices .coin b{font-weight:700;color:var(--text)}
+.miniprices .coin .px{color:var(--text-2)}
+.up{color:var(--pos)}.down{color:var(--neg)}
+
+/* breadcrumb */
+.crumbs{padding:18px 0;font-size:12.5px;color:var(--muted);letter-spacing:.04em}
+.crumbs a:hover{color:var(--accent)}
+.crumbs span{margin:0 8px;color:var(--border)}
+
+/* article layout */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:60px;padding:0 0 60px;align-items:start}
+@media (max-width:1024px){.layout{grid-template-columns:1fr;gap:40px}}
+
+article.story{max-width:var(--article);margin:0 auto;min-width:0}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.15em;color:var(--neg);text-transform:uppercase;margin-bottom:18px}
+h1.title{font-family:var(--serif);font-weight:700;font-size:54px;line-height:1.08;letter-spacing:-.01em;margin-bottom:22px;color:var(--text)}
+@media (max-width:640px){h1.title{font-size:36px}}
+.subtitle{font-size:21px;line-height:1.5;color:var(--text-2);margin-bottom:32px;font-weight:300;font-family:var(--serif);font-style:italic}
+
+.byline{display:flex;gap:16px;align-items:center;padding:20px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);flex-wrap:wrap}
+.byline .avatar{width:48px;height:48px;border-radius:50%;background:var(--section) url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=80') center/cover;border:1px solid var(--border)}
+.byline .who{flex:1;min-width:200px}
+.byline .who .name{font-weight:600;font-size:14px}
+.byline .who .role{font-size:12px;color:var(--muted)}
+.byline .meta{display:flex;gap:14px;font-size:12px;color:var(--muted);flex-wrap:wrap;align-items:center}
+.badge{display:inline-flex;gap:5px;align-items:center;font-size:11px;font-weight:600;padding:4px 8px;background:var(--section);border:1px solid var(--border);color:var(--text-2);letter-spacing:.04em;text-transform:uppercase}
+.badge.pick{color:var(--accent);border-color:#cfe3ff;background:#f0f7ff}
+
+.actions{display:flex;gap:6px;padding:14px 0;border-bottom:1px solid var(--border);justify-content:space-between;flex-wrap:wrap;align-items:center}
+.actions .group{display:flex;gap:4px}
+.actions .stat{font-size:12.5px;color:var(--muted);display:flex;gap:18px}
+
+/* hero image */
+.hero{margin:36px 0 12px}
+.hero img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--section)}
+.caption{font-size:12.5px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--border);font-style:italic}
+.caption b{font-style:normal;color:var(--text-2);font-weight:600}
+
+/* body */
+.body{font-size:18px;line-height:1.78;color:var(--text);font-family:'Source Sans 3', var(--sans)}
+.body p{margin:1.1em 0}
+.body p:first-of-type::first-letter{font-family:var(--serif);font-size:74px;float:left;line-height:.9;padding:6px 12px 0 0;font-weight:700;color:var(--text)}
+.body h2{font-family:var(--serif);font-weight:700;font-size:32px;margin:48px 0 14px;line-height:1.2;letter-spacing:-.01em}
+.body h3{font-family:var(--serif);font-weight:600;font-size:23px;margin:32px 0 10px;line-height:1.3}
+.body a{color:var(--accent);border-bottom:1px solid #cfe3ff}
+.body ul,.body ol{margin:1em 0 1em 1.4em}
+.body li{margin:.5em 0}
+
+.pullquote{font-family:var(--serif);font-size:30px;line-height:1.32;color:var(--text);border-left:3px solid var(--text);padding:14px 0 14px 28px;margin:40px 0;font-weight:500}
+.pullquote cite{display:block;font-size:13px;color:var(--muted);font-style:normal;margin-top:14px;letter-spacing:.04em;font-family:var(--sans)}
+
+.callout{background:var(--section);border-left:3px solid var(--accent);padding:22px 26px;margin:34px 0;font-size:16px}
+.callout h4{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;margin-bottom:8px}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0}
+@media (max-width:640px){.stats{grid-template-columns:1fr}}
+.stat-card{border:1px solid var(--border);padding:22px;background:var(--bg)}
+.stat-card .v{font-family:var(--serif);font-size:34px;font-weight:700;line-height:1.1}
+.stat-card .l{font-size:12px;color:var(--muted);margin-top:8px;letter-spacing:.05em;text-transform:uppercase}
+
+.chartbox{margin:34px 0;border:1px solid var(--border);padding:22px;background:var(--bg)}
+.chartbox .title{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);margin-bottom:14px}
+.chart-svg{width:100%;height:220px;display:block}
+.chartbox .note{font-size:12px;color:var(--muted);margin-top:10px}
+
+table.cmp{width:100%;border-collapse:collapse;margin:30px 0;font-size:15px}
+table.cmp th,table.cmp td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border)}
+table.cmp th{background:var(--section);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);font-weight:600}
+table.cmp tr:hover td{background:var(--section)}
+
+.takeaways{border:1px solid var(--border);padding:26px;margin:34px 0;background:var(--section)}
+.takeaways h4{font-family:var(--serif);font-size:20px;margin-bottom:12px}
+.takeaways ul{margin-left:1.2em}
+.takeaways li{margin:.4em 0;font-size:15.5px}
+
+.warning{border:1px solid #f3c7c2;background:#fef6f5;color:#7a1d14;padding:18px 22px;margin:30px 0;font-size:14.5px;border-left:3px solid var(--neg)}
+.editor-note{border:1px dashed var(--border);padding:18px 22px;margin:30px 0;font-size:14px;color:var(--muted);font-style:italic}
+
+.faq{margin:30px 0;border-top:1px solid var(--border)}
+.faq details{border-bottom:1px solid var(--border);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-size:24px;color:var(--muted);font-weight:300}
+.faq details[open] summary::after{content:'−'}
+.faq details p{margin-top:10px;color:var(--text-2);font-size:15px}
+
+.inline-img{margin:34px -40px}
+@media (max-width:900px){.inline-img{margin:34px 0}}
+.inline-img img{width:100%;aspect-ratio:16/9;object-fit:cover}
+
+/* tags + share */
+.tags{margin:36px 0;display:flex;flex-wrap:wrap;gap:8px}
+.tags a{font-size:12px;padding:6px 12px;background:var(--section);border:1px solid var(--border);color:var(--text-2);transition:.15s}
+.tags a:hover{border-color:var(--text);color:var(--text)}
+
+.share-block{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0;margin:36px 0;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.share-block .label{font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.share-icons{display:flex;gap:8px}
+.share-icons a{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--border);color:var(--text-2);transition:.15s}
+.share-icons a:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+
+/* author */
+.author-box{display:grid;grid-template-columns:120px 1fr;gap:24px;border:1px solid var(--border);padding:28px;margin:40px 0;background:var(--section)}
+@media (max-width:640px){.author-box{grid-template-columns:1fr}}
+.author-box .photo{width:120px;height:120px;border-radius:50%;background:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80') center/cover;border:1px solid var(--border)}
+.author-box h4{font-family:var(--serif);font-size:22px;margin-bottom:4px}
+.author-box .who-role{font-size:12.5px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+.author-box p{font-size:14.5px;color:var(--text-2);line-height:1.65}
+.author-box .socials{display:flex;gap:8px;margin-top:14px}
+.author-box .socials a{width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--border);color:var(--text-2)}
+.author-box .socials a:hover{background:var(--text);color:var(--bg)}
+
+/* sidebar */
+aside.side{position:sticky;top:140px;align-self:start;font-size:14px;display:flex;flex-direction:column;gap:32px;max-height:calc(100vh - 160px);overflow-y:auto;padding-right:4px;scrollbar-width:thin}
+@media (max-width:1024px){aside.side{position:static;max-height:none}}
+.side-block h5{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--text);padding-bottom:10px;border-bottom:2px solid var(--text);margin-bottom:14px}
+.side-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.side-list li{display:flex;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.side-list li:last-child{border-bottom:none}
+.side-list .num{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--accent);line-height:1;width:28px;flex-shrink:0}
+.side-list .thumb{width:70px;height:70px;flex-shrink:0;background:var(--section) center/cover}
+.side-list .meta{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+.side-list a.head{font-weight:600;font-size:14px;line-height:1.35;color:var(--text)}
+.side-list a.head:hover{color:var(--accent)}
+
+.market-snap{border:1px solid var(--border);padding:18px}
+.market-snap .coin{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
+.market-snap .coin:last-child{border:none}
+.market-snap .coin b{font-weight:600}
+.market-snap .coin .sym{color:var(--muted);font-size:11px;margin-left:4px;text-transform:uppercase}
+.market-snap .coin .px{font-variant-numeric:tabular-nums;font-weight:600}
+.market-snap .coin .ch{font-size:12px;font-variant-numeric:tabular-nums;text-align:right;min-width:60px}
+
+.fg-index{text-align:center;padding:20px;border:1px solid var(--border)}
+.fg-dial{width:140px;height:70px;margin:0 auto 10px;position:relative;overflow:hidden}
+.fg-dial::before{content:'';position:absolute;inset:0;border-radius:140px 140px 0 0;background:conic-gradient(from 270deg, var(--neg) 0deg, #e8a317 45deg, #f4d03f 90deg, var(--pos) 180deg, transparent 180deg);mask:radial-gradient(circle at 50% 100%, transparent 50%, #000 51%);-webkit-mask:radial-gradient(circle at 50% 100%, transparent 50%, #000 51%)}
+.fg-needle{position:absolute;bottom:0;left:50%;width:2px;height:60px;background:var(--text);transform-origin:bottom;transform:translateX(-50%) rotate(28deg);z-index:2}
+.fg-val{font-family:var(--serif);font-size:32px;font-weight:700}
+.fg-lbl{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+
+.newsletter{background:var(--text);color:var(--bg);padding:24px}
+.newsletter h5{color:var(--bg);border-color:var(--bg)}
+.newsletter p{font-size:13px;color:#bbb;margin:10px 0 14px}
+.newsletter form{display:flex;flex-direction:column;gap:8px}
+.newsletter input{padding:11px 12px;background:transparent;border:1px solid #444;color:var(--bg);font-family:inherit;font-size:13px}
+.newsletter input::placeholder{color:#888}
+.newsletter button{padding:11px;background:var(--bg);color:var(--text);border:none;font-weight:600;font-size:13px;cursor:pointer;letter-spacing:.04em;text-transform:uppercase}
+.newsletter .priv{font-size:11px;color:#888;margin-top:8px}
+
+.sponsor{border:1px solid var(--border);padding:18px;background:var(--section)}
+.sponsor .tag{font-size:10px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
+.sponsor img{aspect-ratio:16/9;object-fit:cover;margin-bottom:10px}
+.sponsor h6{font-family:var(--serif);font-size:16px;line-height:1.3;font-weight:600}
+
+.poll{border:1px solid var(--border);padding:18px}
+.poll p{font-weight:600;margin-bottom:12px;font-size:14px}
+.poll label{display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);margin-bottom:6px;font-size:13px;cursor:pointer;transition:.15s}
+.poll label:hover{border-color:var(--accent);background:var(--section)}
+
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
+.tag-cloud a{font-size:11.5px;padding:5px 9px;background:var(--section);border:1px solid var(--border);color:var(--text-2)}
+.tag-cloud a:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+
+/* comments */
+.comments{padding:50px 0;border-top:1px solid var(--border)}
+.comments h3{font-family:var(--serif);font-size:28px;margin-bottom:6px}
+.comments .sub{font-size:13px;color:var(--muted);margin-bottom:24px}
+.cm-sort{display:flex;gap:8px;margin-bottom:24px;font-size:12px}
+.cm-sort a{padding:6px 10px;border:1px solid var(--border);color:var(--text-2)}
+.cm-sort a.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+.cm-form{display:flex;gap:14px;margin-bottom:36px;align-items:flex-start}
+.cm-form .av{width:42px;height:42px;border-radius:50%;background:var(--section);flex-shrink:0;border:1px solid var(--border)}
+.cm-form textarea{flex:1;border:1px solid var(--border);padding:12px;font-family:inherit;min-height:80px;resize:vertical;font-size:14px}
+.cm-form button{align-self:flex-end}
+.cm{display:flex;gap:14px;padding:20px 0;border-bottom:1px solid var(--border)}
+.cm .av{width:42px;height:42px;border-radius:50%;flex-shrink:0;background:var(--section) center/cover;border:1px solid var(--border)}
+.cm .body2 b{font-size:14px}.cm .body2 .when{font-size:11.5px;color:var(--muted);margin-left:8px}
+.cm .body2 p{margin:8px 0;font-size:14.5px;color:var(--text-2);line-height:1.6}
+.cm .body2 .acts{font-size:12px;color:var(--muted);display:flex;gap:14px}
+.cm .body2 .acts a:hover{color:var(--accent)}
+.cm .reply{margin-left:56px;padding-top:18px;border-top:1px solid var(--border);margin-top:18px}
+
+/* recommended */
+.section-head{font-family:var(--serif);font-size:30px;font-weight:700;padding:10px 0 18px;border-bottom:2px solid var(--text);margin-bottom:28px}
+.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:50px 0;border-top:1px solid var(--border)}
+@media (max-width:900px){.rec-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.rec-grid{grid-template-columns:1fr}}
+.rec-card{cursor:pointer;display:block}
+.rec-card .ph{aspect-ratio:16/10;background:var(--section) center/cover;overflow:hidden;margin-bottom:14px}
+.rec-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.rec-card:hover .ph img{transform:scale(1.05)}
+.rec-card .cat{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.rec-card h4{font-family:var(--serif);font-size:20px;font-weight:600;line-height:1.3;margin-bottom:8px}
+.rec-card:hover h4{color:var(--accent)}
+.rec-card .sum{font-size:14px;color:var(--text-2);line-height:1.55;margin-bottom:10px}
+.rec-card .meta{font-size:12px;color:var(--muted);display:flex;gap:12px}
+
+.rec-section{padding:50px 0;border-top:1px solid var(--border)}
+.rec-section.alt{background:var(--section)}
+.rec6{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media (max-width:900px){.rec6{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.rec6{grid-template-columns:1fr}}
+.rec6 .rec-card .ph{aspect-ratio:4/3}
+.rec6 .rec-card h4{font-size:17px}
+
+/* carousel */
+.carousel{display:flex;gap:20px;overflow-x:auto;padding:10px 0 22px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.carousel .rec-card{min-width:280px;scroll-snap-align:start}
+
+/* big newsletter */
+.nl-band{background:var(--section);padding:60px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.nl-band .inner{max-width:640px;margin:0 auto;text-align:center}
+.nl-band h2{font-family:var(--serif);font-size:40px;font-weight:700;margin-bottom:12px;line-height:1.15}
+.nl-band p{color:var(--text-2);margin-bottom:24px}
+.nl-band form{display:flex;gap:0;max-width:480px;margin:0 auto;border:1px solid var(--text)}
+.nl-band input{flex:1;padding:14px 16px;border:none;background:transparent;font-family:inherit;font-size:14px}
+.nl-band input:focus{outline:none}
+.nl-band button{padding:14px 24px;background:var(--text);color:var(--bg);border:none;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+.nl-band .priv{font-size:12px;color:var(--muted);margin-top:14px}
+
+/* footer */
+footer.site{background:#0a0a0a;color:#bbb;padding:60px 0 30px;font-size:13px}
+footer.site .grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:40px;margin-bottom:40px}
+@media (max-width:900px){footer.site .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){footer.site .grid{grid-template-columns:1fr}}
+footer.site .brand{font-family:var(--serif);font-size:30px;font-weight:900;color:#fff;margin-bottom:14px}
+footer.site .brand .tld{color:var(--accent)}
+footer.site p.about{line-height:1.6;margin-bottom:18px}
+footer.site h6{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:14px;font-weight:600}
+footer.site ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+footer.site a:hover{color:#fff}
+footer.site .bottom{border-top:1px solid #222;padding-top:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;font-size:12px;color:#777}
+footer.site .bottom .selects{display:flex;gap:10px}
+footer.site .bottom select{background:#111;border:1px solid #222;color:#bbb;padding:6px 10px;font-family:inherit;font-size:12px}
+.disclaimer{background:#111;color:#777;padding:20px 0;font-size:11.5px;line-height:1.6;text-align:center}
+
+/* floating */
+#backtop{position:fixed;right:24px;bottom:24px;width:44px;height:44px;background:var(--text);color:var(--bg);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:90;border-radius:2px;box-shadow:0 4px 14px rgba(0,0,0,.15);transition:.2s}
+#backtop:hover{background:var(--accent)}
+#backtop.show{display:flex}
+
+.floating-share{position:fixed;left:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;z-index:80}
+@media (max-width:1200px){.floating-share{display:none}}
+.floating-share a{width:38px;height:38px;display:grid;place-items:center;background:var(--bg);border:1px solid var(--border);color:var(--text-2);transition:.15s}
+.floating-share a:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+
+.tools{position:fixed;right:24px;top:160px;display:flex;flex-direction:column;gap:6px;z-index:80}
+@media (max-width:1280px){.tools{display:none}}
+.tools button{width:38px;height:38px;background:var(--bg);border:1px solid var(--border);color:var(--text-2);cursor:pointer;font-family:inherit}
+.tools button:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+
+/* icons - simple svg */
+svg.i{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+::selection{background:var(--accent);color:#fff}
+
+/* fade in on load */
+.fade{opacity:0;transform:translateY(8px);transition:opacity .6s ease, transform .6s ease}
+.fade.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- top bar -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">
+      <span id="datestr">Tuesday, June 23, 2026</span>
+      <span class="status"><span class="dot"></span> Markets Open · NYSE</span>
+    </div>
+    <div class="right">
+      <a href="#">Help</a>
+      <a href="#">Newsletters</a>
+      <a href="#">Apps</a>
+      <a href="#">Make CryptoLedger your homepage</a>
+    </div>
+  </div>
+</div>
+
+<!-- breaking ticker -->
+<div class="ticker">
+  <div class="wrap">
+    <div class="ticker-inner">
+      <span class="tk-label">BREAKING</span>
+      <div class="tk-track">
+        <span><b>•</b> Bitcoin crosses new resistance level above $84,200</span>
+        <span><b>•</b> Spot Ethereum ETF inflows continue for 11th straight day</span>
+        <span><b>•</b> SEC announces crypto framework discussion for Q3</span>
+        <span><b>•</b> Market volatility increases as Fed minutes loom</span>
+        <span><b>•</b> Hong Kong approves three new digital asset funds</span>
+        <span><b>•</b> Bitcoin crosses new resistance level above $84,200</span>
+        <span><b>•</b> Spot Ethereum ETF inflows continue for 11th straight day</span>
+        <span><b>•</b> SEC announces crypto framework discussion for Q3</span>
+        <span><b>•</b> Market volatility increases as Fed minutes loom</span>
+        <span><b>•</b> Hong Kong approves three new digital asset funds</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- header -->
+<header class="site">
+  <div class="wrap">
+    <div class="masthead">
+      <div class="left">
+        <button class="icon-btn" aria-label="Menu"><svg class="i" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+        <button class="icon-btn" aria-label="Search"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      </div>
+      <a href="#" class="logo">Crypto<span class="tld">Ledger</span></a>
+      <div class="right">
+        <a href="#" class="btn ghost">Sign In</a>
+        <a href="#" class="btn">Subscribe</a>
+      </div>
+    </div>
+  </div>
+  <nav class="primary" aria-label="Primary">
+    <div class="wrap">
+      <ul>
+        <li><a href="#" class="active">Markets</a></li>
+        <li><a href="#">Bitcoin</a></li>
+        <li><a href="#">Ethereum</a></li>
+        <li><a href="#">Altcoins</a></li>
+        <li><a href="#">Regulation</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Mining</a></li>
+        <li><a href="#">NFT</a></li>
+        <li><a href="#">Web3</a></li>
+        <li><a href="#">Opinion</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Podcasts</a></li>
+        <li><a href="#">Newsletter</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="miniprices" aria-label="Crypto prices">
+    <div class="wrap">
+      <div class="row" id="miniprices"></div>
+    </div>
+  </div>
+</header>
+
+<!-- floating tools -->
+<div class="floating-share" aria-label="Share">
+  <a href="#" title="Facebook"><svg class="i" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+  <a href="#" title="X"><svg class="i" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+  <a href="#" title="LinkedIn"><svg class="i" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
+  <a href="#" title="Telegram"><svg class="i" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></a>
+  <a href="#" title="WhatsApp"><svg class="i" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.2-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></a>
+  <a href="#" title="Email"><svg class="i" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></a>
+</div>
+
+<div class="tools" aria-label="Reading tools">
+  <button id="darkToggle" title="Toggle dark mode">☾</button>
+  <button id="fontUp" title="Increase font">A+</button>
+  <button id="fontDown" title="Decrease font">A-</button>
+  <button id="printBtn" title="Print">⎙</button>
+  <button id="bookmarkBtn" title="Bookmark">♡</button>
+  <button id="copyBtn" title="Copy link">⎘</button>
+</div>
+
+<!-- breadcrumb -->
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="#">Home</a><span>/</span><a href="#">Crypto</a><span>/</span><a href="#">Markets</a><span>/</span><a href="#">Bitcoin</a><span>/</span>Article
+  </nav>
+</div>
+
+<!-- main layout -->
+<div class="wrap">
+<div class="layout">
+
+<article class="story">
+  <p class="kicker">Markets · Bitcoin</p>
+  <h1 class="title">Bitcoin Surges Above Key Resistance as Institutional Demand Accelerates</h1>
+  <p class="subtitle">Spot ETF inflows, whale accumulation, and a shifting macro backdrop have combined to push the world's largest cryptocurrency to a level analysts now describe as a "structural pivot."</p>
+
+  <div class="byline">
+    <div class="avatar" aria-hidden="true"></div>
+    <div class="who">
+      <div class="name">Eleanor Whitfield</div>
+      <div class="role">Senior Markets Correspondent</div>
+    </div>
+    <div class="meta">
+      <span>Published <b>Jun 23, 2026, 8:15 AM ET</b></span>
+      <span>Updated <b>11:42 AM ET</b></span>
+      <span>· 14 min read</span>
+      <span class="badge">✓ Fact-checked</span>
+      <span class="badge pick">★ Editor's Pick</span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <div class="group">
+      <button class="icon-btn" aria-label="Bookmark"><svg class="i" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16l7-4z"/></svg></button>
+      <button class="icon-btn" aria-label="Print"><svg class="i" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg></button>
+      <button class="icon-btn" aria-label="Copy link"><svg class="i" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></button>
+      <button class="icon-btn" aria-label="Comment"><svg class="i" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
+    </div>
+    <div class="stat">
+      <span>👁 42,318 views</span>
+      <span>💬 248 comments</span>
+    </div>
+  </div>
+
+  <figure class="hero">
+    <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=1600&q=80" alt="A trader monitors multiple screens displaying Bitcoin and equity charts on a professional trading desk." loading="eager"/>
+    <figcaption class="caption"><b>Above:</b> A trader monitors crypto and equity markets at a New York trading floor on Monday. <b>Photo:</b> Marcus Rivera / Bloomberg via Getty Images</figcaption>
+  </figure>
+
+  <div class="body" id="articleBody">
+    <p>Bitcoin pushed decisively above the $84,000 level on Monday, breaking through a months-long zone of resistance that had defined the market's caution since early spring. The move, accompanied by the heaviest spot trading volumes since the post-halving rally of 2024, has reignited a debate that traders thought had quieted: whether this cycle's institutional demand is strong enough to carry the asset to fresh all-time highs before the end of the year.</p>
+
+    <p>By the New York close, the world's largest cryptocurrency traded at $84,612, up 6.4 percent on the session and roughly 18 percent over the past month. Ether followed in sympathy, gaining 4.9 percent to settle near $4,710, while a basket of large-cap altcoins tracked by the CL10 index rose 5.2 percent. The broader market added more than $190 billion in capitalization in twenty-four hours.</p>
+
+    <p>Analysts and fund managers interviewed by <em>CryptoLedger</em> attributed the breakout to a confluence of forces: record inflows into U.S. spot Bitcoin and Ether exchange-traded funds, a softening tone from Federal Reserve officials regarding the path of interest rates, and a noticeable shift in the on-chain behavior of long-term holders, who have begun to absorb supply rather than distribute it.</p>
+
+    <h2>A Market Powered By ETFs</h2>
+    <p>Eighteen months after the United States approved spot Bitcoin ETFs, the products have become the single most important channel of demand in the digital asset market. According to data compiled by Farside Investors, the eleven U.S. spot Bitcoin ETFs have collectively absorbed more than $54 billion of net inflows since launch, with BlackRock's iShares Bitcoin Trust alone accounting for roughly 45 percent of that total.</p>
+
+    <p>Last week marked the strongest five-day stretch of inflows since March, with $2.1 billion entering the funds — a pace that, if sustained, would consume the equivalent of more than 80 percent of newly mined Bitcoin every month. "The supply-demand math has simply broken," said Priya Vasquez, chief digital asset strategist at Halcyon Capital. "You cannot run inflows at this rate against a fixed issuance schedule and not eventually see price react."</p>
+
+    <div class="stats">
+      <div class="stat-card"><div class="v">$84,612</div><div class="l">BTC Spot Close</div></div>
+      <div class="stat-card"><div class="v">+18.4%</div><div class="l">30-Day Return</div></div>
+      <div class="stat-card"><div class="v">$2.1B</div><div class="l">Weekly ETF Inflows</div></div>
+    </div>
+
+    <p>The trend extends beyond the United States. Hong Kong's spot Bitcoin and Ether ETFs, launched last year amid investor skepticism, have seen assets under management climb steadily past $1.4 billion. In London, the FCA's recent approval of crypto exchange-traded notes for professional investors has unlocked allocation from a generation of European wealth managers who had previously been blocked by mandate restrictions.</p>
+
+    <h3>The Whale Question</h3>
+    <p>While ETFs dominate headlines, on-chain analysts argue that the more telling story is unfolding in the behavior of so-called "whale" wallets — addresses holding more than 1,000 BTC. According to Glassnode, the cohort accumulated approximately 71,400 BTC over the past thirty days, the largest monthly net accumulation since October 2023.</p>
+
+    <p>"What's striking is the lack of distribution," said Daichi Mori, head of research at on-chain analytics firm CryptoQuant. "In previous cycles, a move of this magnitude would trigger meaningful profit-taking from long-term holders. We're not seeing it. Coins are leaving exchanges, not arriving."</p>
+
+    <blockquote class="pullquote">
+      "The supply-demand math has simply broken. You cannot run inflows at this rate against a fixed issuance schedule and not eventually see price react."
+      <cite>— Priya Vasquez, Chief Digital Asset Strategist, Halcyon Capital</cite>
+    </blockquote>
+
+    <h2>The Macro Backdrop</h2>
+    <p>The breakout did not occur in a vacuum. In the past two weeks, U.S. inflation data has come in cooler than expected for the third consecutive month, while jobless claims have ticked higher. Futures markets are now pricing a 78 percent probability of a Federal Reserve rate cut at the September meeting — up from 41 percent in early June.</p>
+
+    <p>The dollar index, meanwhile, has slipped to its lowest level since December, and ten-year Treasury yields have eased below 4.1 percent. The combination — looser financial conditions, a weaker dollar, falling real yields — is precisely the cocktail that has historically supported higher Bitcoin valuations.</p>
+
+    <figure class="inline-img">
+      <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1600&q=80" alt="Glowing trading screens displaying cryptocurrency candlestick charts." loading="lazy"/>
+      <figcaption class="caption"><b>Trading screens</b> at a digital asset desk in Singapore. <b>Photo:</b> Reuters / Edgar Su</figcaption>
+    </figure>
+
+    <div class="chartbox">
+      <div class="title">Bitcoin 30-Day Spot Price (USD)</div>
+      <svg class="chart-svg" viewBox="0 0 600 220" preserveAspectRatio="none" aria-label="Bitcoin price chart">
+        <defs><linearGradient id="g1" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#0A84FF" stop-opacity=".25"/><stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/></linearGradient></defs>
+        <g stroke="#eee" stroke-width="1">
+          <line x1="0" y1="40" x2="600" y2="40"/><line x1="0" y1="90" x2="600" y2="90"/><line x1="0" y1="140" x2="600" y2="140"/><line x1="0" y1="190" x2="600" y2="190"/>
+        </g>
+        <path d="M0,170 L40,165 L80,150 L120,155 L160,130 L200,140 L240,115 L280,120 L320,95 L360,90 L400,75 L440,80 L480,55 L520,45 L560,40 L600,30 L600,220 L0,220 Z" fill="url(#g1)"/>
+        <path d="M0,170 L40,165 L80,150 L120,155 L160,130 L200,140 L240,115 L280,120 L320,95 L360,90 L400,75 L440,80 L480,55 L520,45 L560,40 L600,30" fill="none" stroke="#0A84FF" stroke-width="2.2"/>
+      </svg>
+      <div class="note">Source: CryptoLedger Markets · Data as of 11:00 AM ET, June 23, 2026.</div>
+    </div>
+
+    <h3>Federal Reserve in Focus</h3>
+    <p>Minutes from the Federal Reserve's June meeting, released last week, revealed growing internal disagreement over the pace of policy normalization. Several voting members expressed concern that real interest rates remain "meaningfully restrictive" given the disinflation trajectory, while a smaller faction warned that loosening too quickly could reignite asset bubbles.</p>
+
+    <p>For crypto markets, the implication is clear. "Bitcoin trades like the longest-duration risk asset in the world," said Marcus O'Neill, portfolio manager at Concord Macro. "Every basis point of expected rate cuts feeds directly into its valuation. We're seeing that mechanism work in real time."</p>
+
+    <div class="callout">
+      <h4>Why It Matters</h4>
+      <p>A sustained move above $84,000 is significant because the level has acted as both resistance and supply concentration for over four months. Analysts watch on-chain "cost basis" clusters — price ranges where large numbers of coins last moved — as proxies for support and resistance.</p>
+    </div>
+
+    <h2>Regulation: A Shifting Global Picture</h2>
+    <p>The regulatory landscape, long viewed as the largest overhang on crypto markets, is finally beginning to tilt in the industry's favor. The U.S. Securities and Exchange Commission this month announced a formal framework discussion for digital asset issuance and custody, with a public comment period scheduled for Q3.</p>
+
+    <h3>Europe and MiCA</h3>
+    <p>In Europe, the Markets in Crypto-Assets Regulation (MiCA) has now been in full effect for eighteen months, providing what one Frankfurt-based banker described as "the most predictable regulatory environment in the world for digital asset firms." Stablecoin issuers, in particular, have flocked to obtain MiCA licenses, with the total euro-denominated stablecoin supply growing fourfold since the regulation took effect.</p>
+
+    <h3>Asia and the Middle East</h3>
+    <p>Singapore and Hong Kong continue to compete aggressively for crypto market share, while Japan's Financial Services Agency has signaled a more permissive stance on token issuance by domestic exchanges. In the Middle East, Dubai's Virtual Assets Regulatory Authority has granted operating licenses to twelve new firms in 2026 alone.</p>
+
+    <table class="cmp">
+      <thead><tr><th>Jurisdiction</th><th>Regulatory Stance</th><th>Spot ETF</th><th>Stablecoin Rules</th></tr></thead>
+      <tbody>
+        <tr><td>United States</td><td>Evolving</td><td>Approved</td><td>Pending legislation</td></tr>
+        <tr><td>European Union</td><td>MiCA in force</td><td>ETN (pro)</td><td>Comprehensive</td></tr>
+        <tr><td>United Kingdom</td><td>FCA framework</td><td>ETN (pro)</td><td>Active drafting</td></tr>
+        <tr><td>Hong Kong</td><td>Pro-innovation</td><td>Approved</td><td>Licensed issuers</td></tr>
+        <tr><td>Singapore</td><td>Selective licensing</td><td>Not approved</td><td>MAS supervised</td></tr>
+        <tr><td>UAE (Dubai)</td><td>VARA framework</td><td>Restricted</td><td>Sandbox</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Technical Picture: A Structural Pivot</h2>
+    <p>From a chart perspective, the breakout above $84,000 carries technical weight that traders take seriously. The level coincides with the volume-weighted average price for all Bitcoin transactions over the past 200 days — a measure technical analysts treat as the long-term equilibrium between buyers and sellers.</p>
+
+    <p>Beyond that, the Relative Strength Index on daily charts now reads 68, elevated but short of the 80-plus levels historically associated with cycle tops. The MACD has flipped positive for the first time since April, and the 50-day moving average has crossed above the 200-day average — a configuration known as a "golden cross" that quantitative strategies are programmed to follow.</p>
+
+    <div class="takeaways">
+      <h4>Key Takeaways</h4>
+      <ul>
+        <li>Bitcoin broke above $84,000 on heavy spot volume, ending a four-month consolidation.</li>
+        <li>U.S. spot ETFs absorbed $2.1B in net inflows last week — the strongest pace since March.</li>
+        <li>Whale wallets accumulated 71,400 BTC over thirty days, the largest monthly figure since 2023.</li>
+        <li>A weaker dollar and falling real yields have created a supportive macro backdrop.</li>
+        <li>Analysts caution that elevated leverage in derivatives markets warrants vigilance.</li>
+      </ul>
+    </div>
+
+    <h3>Support and Resistance</h3>
+    <p>Should the rally pause, traders are watching $79,800 as immediate support — a level that aligns with both the prior breakout point and a major cluster of on-chain cost basis. A break below that could open the door to a deeper retracement toward $72,500. To the upside, the next significant resistance sits at $89,400, the all-time high recorded in November 2025, with $95,000 a psychologically important target above that.</p>
+
+    <h2>Risks Lurking Beneath the Surface</h2>
+    <p>Even bullish analysts acknowledge that the market is not without risks. Open interest in Bitcoin perpetual futures has surged to $42 billion, near record highs, and funding rates on major exchanges have turned sharply positive — a sign that leveraged long positioning is crowded.</p>
+
+    <div class="warning">
+      <strong>Risk Alert:</strong> Crowded long positioning has historically preceded sharp short-term corrections, even within otherwise bullish trends. Funding rates above 0.08% per eight-hour interval are considered "hot" by most desk traders.
+    </div>
+
+    <p>Geopolitical risk also looms. Ongoing tensions in Eastern Europe and intermittent disruptions to shipping routes through the Red Sea have introduced bouts of volatility into all risk markets. A flare-up could quickly reverse the dollar's recent weakness and remove one of the supports beneath the current rally.</p>
+
+    <h3>Liquidity and Exchange Concentration</h3>
+    <p>A more structural concern is the continued concentration of trading liquidity on a handful of exchanges. Binance, despite ongoing regulatory scrutiny in multiple jurisdictions, still accounts for roughly 38 percent of global Bitcoin spot volume. Any operational disruption at a major venue could amplify volatility.</p>
+
+    <h2>What The Analysts Are Saying</h2>
+    <p>Forecasters interviewed by <em>CryptoLedger</em> remain divided on the precise upside target, but broadly constructive. Standard Chartered's digital asset team reiterated their $120,000 year-end target. Bernstein's analysts maintain a "structurally bullish" stance with a 12-month price target of $135,000.</p>
+
+    <p>JPMorgan struck a more cautious tone in a note to clients on Tuesday, warning that the speed of the rally could trigger short-term mean reversion. "We continue to view Bitcoin as a strategic allocation in diversified portfolios," wrote the bank's cross-asset team, "but expect tactical volatility around current levels."</p>
+
+    <blockquote class="pullquote">
+      "Bitcoin trades like the longest-duration risk asset in the world. Every basis point of expected rate cuts feeds directly into its valuation."
+      <cite>— Marcus O'Neill, Portfolio Manager, Concord Macro</cite>
+    </blockquote>
+
+    <h2>Ethereum: The Quiet Outperformer</h2>
+    <p>While Bitcoin has captured the headlines, Ethereum's quiet outperformance over the past quarter has not gone unnoticed. The asset is up 27 percent over the past ninety days, supported by accelerating activity on Layer 2 networks, a sharp rebound in DeFi total value locked, and steady inflows into the spot Ether ETFs that launched in mid-2024.</p>
+
+    <p>Staking yields on Ethereum have stabilized in the 3.4 to 3.8 percent range, while real fees generated by the network reached $182 million in May — the highest monthly total since the bull market of 2021.</p>
+
+    <figure class="inline-img">
+      <img src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c?auto=format&fit=crop&w=1600&q=80" alt="Ethereum token branding visual on dark background." loading="lazy"/>
+      <figcaption class="caption"><b>Above:</b> Ethereum has gained nearly 27% over the past quarter. <b>Photo:</b> Getty Images</figcaption>
+    </figure>
+
+    <h2>The Outlook From Here</h2>
+    <p>The medium-term outlook hinges, as always, on the interplay between flows and macro conditions. If ETF inflows persist at current rates and the Federal Reserve confirms a September rate cut, the path of least resistance remains higher. A breakdown in either pillar — a sudden outflow week, a hawkish Fed surprise — would likely trigger a meaningful pullback.</p>
+
+    <p>Most desks now operate with what one trader described as "constructive caution": net long, but with hedges in place, particularly through put options expiring in September. The CBOE's Bitcoin Volatility Index has risen from 38 to 51 over the past two weeks, indicating that the market is paying up for protection even as spot rallies.</p>
+
+    <div class="editor-note"><strong>Editor's Note:</strong> This article reflects market conditions as of publication. CryptoLedger does not provide investment advice. Cryptocurrency markets are highly volatile; readers should conduct their own due diligence before making any investment decision.</div>
+
+    <h2>Conclusion: A Pivotal Moment</h2>
+    <p>Whether the move above $84,000 marks the beginning of a sustained leg higher or a final blow-off is, of course, unknowable. But the conditions that historically accompany durable Bitcoin advances — institutional flows, supportive macro, accumulation by long-term holders, improving regulation — are present in measurable form for the first time in this cycle.</p>
+
+    <p>"This is the cleanest setup we've seen since 2020," concluded Vasquez of Halcyon Capital. "The question is no longer whether the demand is real. It's whether the supply will hold up."</p>
+
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq">
+      <details open><summary>Why did Bitcoin break above $84,000 now?</summary><p>The breakout reflects a combination of record ETF inflows, accumulation by whale wallets, softer U.S. macro data, and rising odds of a Federal Reserve rate cut.</p></details>
+      <details><summary>What are the next key technical levels?</summary><p>Immediate support sits at $79,800; the next resistance is the all-time high near $89,400, followed by the psychologically important $95,000 level.</p></details>
+      <details><summary>How much have spot ETFs absorbed?</summary><p>U.S. spot Bitcoin ETFs have absorbed more than $54 billion in cumulative net inflows since launch, with $2.1 billion entering last week alone.</p></details>
+      <details><summary>What are the main risks to the rally?</summary><p>Elevated leverage in perpetual futures, crowded long positioning, geopolitical flare-ups, and a potential hawkish surprise from the Federal Reserve.</p></details>
+      <details><summary>How does this compare to previous cycles?</summary><p>The current cycle is characterized by far stronger institutional participation than 2021, with regulated ETF channels accounting for a structural and growing share of demand.</p></details>
+    </div>
+
+    <div class="tags">
+      <a href="#">#Bitcoin</a><a href="#">#Crypto</a><a href="#">#Blockchain</a><a href="#">#Ethereum</a><a href="#">#ETF</a><a href="#">#Investment</a><a href="#">#Markets</a><a href="#">#Trading</a><a href="#">#Finance</a><a href="#">#Web3</a><a href="#">#Altcoins</a><a href="#">#Regulation</a><a href="#">#Technology</a>
+    </div>
+
+    <div class="share-block">
+      <span class="label">Share this story</span>
+      <div class="share-icons">
+        <a href="#" aria-label="Facebook"><svg class="i" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="X"><svg class="i" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg class="i" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
+        <a href="#" aria-label="Telegram"><svg class="i" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4z"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg class="i" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.2-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></a>
+        <a href="#" aria-label="Email"><svg class="i" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></a>
+        <a href="#" aria-label="Copy" id="copyLink2"><svg class="i" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></a>
+        <a href="#" aria-label="Print" onclick="window.print();return false;"><svg class="i" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="author-box">
+      <div class="photo" aria-hidden="true"></div>
+      <div>
+        <h4>Eleanor Whitfield</h4>
+        <div class="who-role">Senior Markets Correspondent · 14 years experience</div>
+        <p>Eleanor covers cryptocurrency markets, institutional adoption, and macro-driven asset flows for CryptoLedger. She previously reported for the Financial Times and Reuters, and holds a degree in Economics from the London School of Economics. Her work has been cited by the Federal Reserve, the Bank for International Settlements, and major institutional research desks.</p>
+        <div class="socials">
+          <a href="#" aria-label="X"><svg class="i" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg class="i" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/></svg></a>
+          <a href="#" aria-label="Email"><svg class="i" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<aside class="side" aria-label="Sidebar">
+  <div class="side-block">
+    <h5>Most Read</h5>
+    <ul class="side-list">
+      <li><div class="num">01</div><div><div class="meta">Markets</div><a href="#" class="head">Ether ETF inflows hit eleven-day streak as staking yields stabilize</a></div></li>
+      <li><div class="num">02</div><div><div class="meta">Regulation</div><a href="#" class="head">SEC unveils draft framework for token issuance and custody</a></div></li>
+      <li><div class="num">03</div><div><div class="meta">Mining</div><a href="#" class="head">Hash rate hits record as Texas miners restart operations</a></div></li>
+      <li><div class="num">04</div><div><div class="meta">Opinion</div><a href="#" class="head">Why this cycle's institutional flows are different — and what it means</a></div></li>
+      <li><div class="num">05</div><div><div class="meta">Web3</div><a href="#" class="head">Layer-2 transaction volume surpasses Ethereum mainnet for first time</a></div></li>
+    </ul>
+  </div>
+
+  <div class="side-block">
+    <h5>Market Snapshot</h5>
+    <div class="market-snap" id="marketSnap"></div>
+  </div>
+
+  <div class="side-block">
+    <h5>Fear & Greed</h5>
+    <div class="fg-index">
+      <div class="fg-dial"><div class="fg-needle"></div></div>
+      <div class="fg-val">72</div>
+      <div class="fg-lbl">Greed</div>
+    </div>
+  </div>
+
+  <div class="side-block">
+    <h5>Latest News</h5>
+    <ul class="side-list">
+      <li><div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=300&q=80')"></div><div><div class="meta">2h ago · Markets</div><a href="#" class="head">Solana spikes 9% as DeFi activity rebounds</a></div></li>
+      <li><div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=300&q=80')"></div><div><div class="meta">3h ago · NFT</div><a href="#" class="head">Blue-chip NFT floor prices firm as collectors return</a></div></li>
+      <li><div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1605792657660-596af9009e82?auto=format&fit=crop&w=300&q=80')"></div><div><div class="meta">4h ago · Mining</div><a href="#" class="head">Marathon Digital reports record monthly production</a></div></li>
+      <li><div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1518544866330-95a2bec01dd9?auto=format&fit=crop&w=300&q=80')"></div><div><div class="meta">6h ago · Technology</div><a href="#" class="head">Zero-knowledge rollups: where the math meets the market</a></div></li>
+    </ul>
+  </div>
+
+  <div class="side-block">
+    <div class="newsletter">
+      <h5>The Morning Briefing</h5>
+      <p>Crypto and markets, in your inbox before the open. Trusted by 320,000+ readers.</p>
+      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓'">
+        <input type="email" placeholder="Your email address" required/>
+        <button type="submit">Subscribe Free</button>
+      </form>
+      <div class="priv">No spam. Unsubscribe anytime.</div>
+    </div>
+  </div>
+
+  <div class="side-block">
+    <h5>Sponsored</h5>
+    <div class="sponsor">
+      <div class="tag">Sponsored Story</div>
+      <img src="https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?auto=format&fit=crop&w=600&q=80" alt="Institutional custody product"/>
+      <h6>How institutional desks are rethinking digital asset custody in 2026</h6>
+    </div>
+  </div>
+
+  <div class="side-block">
+    <h5>Quick Poll</h5>
+    <div class="poll">
+      <p>Where will Bitcoin close 2026?</p>
+      <label><input type="radio" name="poll"/> Below $70K</label>
+      <label><input type="radio" name="poll"/> $70K – $100K</label>
+      <label><input type="radio" name="poll"/> $100K – $130K</label>
+      <label><input type="radio" name="poll"/> Above $130K</label>
+    </div>
+  </div>
+
+  <div class="side-block">
+    <h5>Crypto Calendar</h5>
+    <ul class="side-list">
+      <li><div><div class="meta">Jun 25 · Macro</div><a href="#" class="head">FOMC Minutes release</a></div></li>
+      <li><div><div class="meta">Jun 27 · Conference</div><a href="#" class="head">Token2049 Singapore opens</a></div></li>
+      <li><div><div class="meta">Jul 03 · Unlocks</div><a href="#" class="head">$420M ARB token unlock</a></div></li>
+    </ul>
+  </div>
+
+  <div class="side-block">
+    <h5>Popular Tags</h5>
+    <div class="tag-cloud">
+      <a href="#">Bitcoin</a><a href="#">ETF</a><a href="#">SEC</a><a href="#">Federal Reserve</a><a href="#">Solana</a><a href="#">Layer 2</a><a href="#">Stablecoins</a><a href="#">DeFi</a><a href="#">Staking</a><a href="#">Mining</a><a href="#">Custody</a><a href="#">NFT</a>
+    </div>
+  </div>
+
+</aside>
+</div>
+</div>
+
+<!-- recommended -->
+<div class="wrap">
+  <section class="rec-grid" aria-label="Recommended articles">
+    <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=900&q=80" alt=""/></div><div class="cat">Markets</div><h4>Why Wall Street's Quietest Quants Are Now Crypto's Loudest Bulls</h4><p class="sum">A new generation of systematic funds is rebuilding crypto trading infrastructure — and the inflows are following.</p><div class="meta"><span>By Daichi Mori</span><span>· 9 min read</span></div></a>
+    <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&fit=crop&w=900&q=80" alt=""/></div><div class="cat">Regulation</div><h4>Inside the SEC's New Framework: What Founders Need To Know</h4><p class="sum">The proposed rules would reshape how tokens are issued and custodied in the United States.</p><div class="meta"><span>By Priya Vasquez</span><span>· 11 min read</span></div></a>
+    <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?auto=format&fit=crop&w=900&q=80" alt=""/></div><div class="cat">Technology</div><h4>The Quiet Race to Build Bitcoin's Layer 2</h4><p class="sum">A wave of new networks is testing whether the world's most valuable blockchain can finally scale.</p><div class="meta"><span>By Marcus O'Neill</span><span>· 13 min read</span></div></a>
+  </section>
+</div>
+
+<!-- related stories grid -->
+<section class="rec-section alt">
+  <div class="wrap">
+    <h3 class="section-head">Related Stories</h3>
+    <div class="rec6">
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=700&q=80" alt=""/></div><div class="cat">Bitcoin</div><h4>Hash Rate Hits Record as Texas Miners Restart Operations</h4></a>
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c?auto=format&fit=crop&w=700&q=80" alt=""/></div><div class="cat">Ethereum</div><h4>Layer-2 Volume Surpasses Ethereum Mainnet for First Time</h4></a>
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=700&q=80" alt=""/></div><div class="cat">Altcoins</div><h4>Solana Spikes 9% as DeFi Activity Rebounds Sharply</h4></a>
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1605792657660-596af9009e82?auto=format&fit=crop&w=700&q=80" alt=""/></div><div class="cat">Mining</div><h4>Marathon Digital Reports Record Monthly Production</h4></a>
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1518544866330-95a2bec01dd9?auto=format&fit=crop&w=700&q=80" alt=""/></div><div class="cat">Technology</div><h4>Zero-Knowledge Rollups: Where Math Meets Markets</h4></a>
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1644088379091-d574269d422f?auto=format&fit=crop&w=700&q=80" alt=""/></div><div class="cat">NFT</div><h4>Blue-Chip NFT Floor Prices Firm as Collectors Return</h4></a>
+    </div>
+  </div>
+</section>
+
+<!-- you may also like (carousel) -->
+<section class="rec-section">
+  <div class="wrap">
+    <h3 class="section-head">You May Also Like</h3>
+    <div class="carousel">
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1612010167108-3e6b327405f0?auto=format&fit=crop&w=600&q=80" alt=""/></div><div class="cat">Web3</div><h4>Stablecoin Market Cap Tops $260B as MiCA Drives European Issuance</h4></a>
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1639152201720-5e536d254d81?auto=format&fit=crop&w=600&q=80" alt=""/></div><div class="cat">Opinion</div><h4>The Case Against a Strategic Bitcoin Reserve — And Why It Won't Stop</h4></a>
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1641932969706-71a5e6cad1c8?auto=format&fit=crop&w=600&q=80" alt=""/></div><div class="cat">Research</div><h4>On-Chain Cost Basis: A Practical Guide for Spot Traders</h4></a>
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1621932955986-c9d44e4f0c98?auto=format&fit=crop&w=600&q=80" alt=""/></div><div class="cat">Markets</div><h4>The Quiet Return of Crypto Venture: Deals Up 38% YoY</h4></a>
+      <a class="rec-card" href="#"><div class="ph"><img src="https://images.unsplash.com/photo-1622630998477-20aa696ecb05?auto=format&fit=crop&w=600&q=80" alt=""/></div><div class="cat">Technology</div><h4>Why Restaking Is The Most Controversial Idea in Crypto Right Now</h4></a>
+    </div>
+  </div>
+</section>
+
+<!-- newsletter band -->
+<section class="nl-band">
+  <div class="wrap">
+    <div class="inner">
+      <h2>Read the markets, every morning.</h2>
+      <p>Join 320,000 investors who start their day with CryptoLedger's flagship newsletter — five essential stories, on-chain data, and what to watch in the session ahead.</p>
+      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓'">
+        <input type="email" placeholder="you@firm.com" required/>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="priv">By subscribing you agree to our Terms and Privacy Policy. Unsubscribe anytime.</div>
+    </div>
+  </div>
+</section>
+
+<!-- comments -->
+<section class="comments">
+  <div class="wrap" style="max-width:880px">
+    <h3>Comments <span style="font-weight:400;color:var(--muted);font-family:var(--sans);font-size:18px">(248)</span></h3>
+    <div class="sub">Join the conversation. Comments are moderated.</div>
+
+    <div class="cm-sort">
+      <a href="#" class="active">Top</a>
+      <a href="#">Newest</a>
+      <a href="#">Oldest</a>
+    </div>
+
+    <form class="cm-form" onsubmit="event.preventDefault();alert('Comment submitted for review.');this.reset()">
+      <div class="av"></div>
+      <textarea placeholder="Add to the discussion…" required></textarea>
+      <button class="btn" type="submit">Post Comment</button>
+    </form>
+
+    <div class="cm">
+      <div class="av" style="background-image:url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80')"></div>
+      <div class="body2">
+        <b>James K.</b><span class="when">2h ago</span>
+        <p>Excellent piece. The whale accumulation data alongside the ETF flows is the strongest combination we've seen this cycle. Less convinced about the macro tailwind sticking through Q4 though.</p>
+        <div class="acts"><a href="#">👍 48</a><a href="#">Reply</a></div>
+        <div class="reply cm" style="padding:0;border:none">
+          <div class="av" style="background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80')"></div>
+          <div class="body2">
+            <b>Sarah P.</b><span class="when">1h ago</span>
+            <p>Agreed on macro. Fed could easily disappoint in September if inflation surprises.</p>
+            <div class="acts"><a href="#">👍 12</a><a href="#">Reply</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cm">
+      <div class="av" style="background-image:url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=120&q=80')"></div>
+      <div class="body2">
+        <b>Mei L.</b><span class="when">4h ago</span>
+        <p>Worth noting Hong Kong's spot ETFs have been quietly compounding inflows for months. The Asia story doesn't get enough coverage.</p>
+        <div class="acts"><a href="#">👍 31</a><a href="#">Reply</a></div>
+      </div>
+    </div>
+
+    <div class="cm">
+      <div class="av" style="background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80')"></div>
+      <div class="body2">
+        <b>Andre M.</b><span class="when">5h ago</span>
+        <p>The funding rate warning is well-placed. 0.08%+ has historically marked local tops within bullish trends. Reducing leverage here.</p>
+        <div class="acts"><a href="#">👍 27</a><a href="#">Reply</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="site">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="brand">Crypto<span class="tld">Ledger</span></div>
+        <p class="about">Independent, in-depth reporting on cryptocurrency markets, regulation, and the institutions reshaping global finance. Trusted by professionals in 140+ countries.</p>
+        <div style="display:flex;gap:8px">
+          <a href="#" aria-label="X" style="width:34px;height:34px;border:1px solid #222;display:grid;place-items:center"><svg class="i" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+          <a href="#" aria-label="LinkedIn" style="width:34px;height:34px;border:1px solid #222;display:grid;place-items:center"><svg class="i" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/></svg></a>
+          <a href="#" aria-label="YouTube" style="width:34px;height:34px;border:1px solid #222;display:grid;place-items:center"><svg class="i" viewBox="0 0 24 24"><path d="m10 9 5 3-5 3z"/><rect x="2" y="5" width="20" height="14" rx="3"/></svg></a>
+          <a href="#" aria-label="RSS" style="width:34px;height:34px;border:1px solid #222;display:grid;place-items:center"><svg class="i" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h6>Newsroom</h6>
+        <ul><li><a href="#">About</a></li><li><a href="#">Editorial Policy</a></li><li><a href="#">Corrections</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Contact</a></li></ul>
+      </div>
+      <div>
+        <h6>Business</h6>
+        <ul><li><a href="#">Advertise</a></li><li><a href="#">Subscriptions</a></li><li><a href="#">Licensing</a></li><li><a href="#">Newsletters</a></li><li><a href="#">Apps</a></li><li><a href="#">RSS</a></li></ul>
+      </div>
+      <div>
+        <h6>Sections</h6>
+        <ul><li><a href="#">Markets</a></li><li><a href="#">Bitcoin</a></li><li><a href="#">Ethereum</a></li><li><a href="#">Regulation</a></li><li><a href="#">Technology</a></li><li><a href="#">Research</a></li></ul>
+      </div>
+      <div>
+        <h6>Legal</h6>
+        <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Cookie Policy</a></li><li><a href="#">Accessibility</a></li><li><a href="#">Sitemap</a></li></ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <div>© 2026 CryptoLedger Media Inc. All rights reserved.</div>
+      <div class="selects">
+        <select aria-label="Language"><option>English</option><option>Español</option><option>Deutsch</option><option>日本語</option><option>中文</option></select>
+        <select aria-label="Region"><option>United States</option><option>United Kingdom</option><option>Europe</option><option>Asia-Pacific</option></select>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="disclaimer">
+  <div class="wrap">
+    <strong>Market Disclaimer:</strong> CryptoLedger does not provide investment, tax, legal, or accounting advice. Cryptocurrency trading involves substantial risk including the loss of principal. Past performance is not indicative of future results. Always conduct your own research before making any investment decision.
+  </div>
+</div>
+
+<button id="backtop" aria-label="Back to top">↑</button>
+
+<script>
+// date
+(function(){var d=new Date();var o={weekday:'long',year:'numeric',month:'long',day:'numeric'};try{document.getElementById('datestr').textContent=d.toLocaleDateString('en-US',o)}catch(e){}})();
+
+// mini prices
+var coins=[
+  {n:'Bitcoin',s:'BTC',p:84612.34,c:6.4},
+  {n:'Ethereum',s:'ETH',p:4710.22,c:4.9},
+  {n:'BNB',s:'BNB',p:712.40,c:2.1},
+  {n:'Solana',s:'SOL',p:198.55,c:9.3},
+  {n:'XRP',s:'XRP',p:0.738,c:-1.4},
+  {n:'Dogecoin',s:'DOGE',p:0.182,c:3.2},
+  {n:'Cardano',s:'ADA',p:0.612,c:-0.8},
+  {n:'TON',s:'TON',p:7.41,c:1.6},
+  {n:'Avalanche',s:'AVAX',p:42.18,c:5.7}
+];
+function fmt(n){return n>=100?n.toLocaleString('en-US',{maximumFractionDigits:2}):n.toFixed(3)}
+document.getElementById('miniprices').innerHTML=coins.map(function(c){var cls=c.c>=0?'up':'down';var sign=c.c>=0?'+':'';return '<div class="coin"><b>'+c.s+'</b> <span class="px">$'+fmt(c.p)+'</span> <span class="'+cls+'">'+sign+c.c.toFixed(2)+'%</span></div>'}).join('');
+
+// market snapshot
+document.getElementById('marketSnap').innerHTML=coins.slice(0,7).map(function(c){var cls=c.c>=0?'up':'down';var sign=c.c>=0?'+':'';var ar=c.c>=0?'▲':'▼';return '<div class="coin"><div><b>'+c.n+'</b><span class="sym">'+c.s+'</span></div><div class="px">$'+fmt(c.p)+'</div><div class="ch '+cls+'">'+ar+' '+sign+c.c.toFixed(2)+'%</div></div>'}).join('');
+
+// progress + back-to-top
+var prog=document.getElementById('progress');var bt=document.getElementById('backtop');
+window.addEventListener('scroll',function(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=h.scrollHeight-h.clientHeight;prog.style.width=(st/sh*100)+'%';bt.classList.toggle('show',st>600)},{passive:true});
+bt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+// dark mode
+var dt=document.getElementById('darkToggle');
+if(localStorage.getItem('dark')==='1')document.body.classList.add('dark');
+dt.addEventListener('click',function(){document.body.classList.toggle('dark');localStorage.setItem('dark',document.body.classList.contains('dark')?'1':'0')});
+
+// font size
+var base=17;
+document.getElementById('fontUp').addEventListener('click',function(){base=Math.min(base+1,22);document.body.style.fontSize=base+'px'});
+document.getElementById('fontDown').addEventListener('click',function(){base=Math.max(base-1,14);document.body.style.fontSize=base+'px'});
+
+// print
+document.getElementById('printBtn').addEventListener('click',function(){window.print()});
+
+// bookmark
+document.getElementById('bookmarkBtn').addEventListener('click',function(){this.textContent=this.textContent==='♡'?'♥':'♡'});
+
+// copy link
+function copyLink(){navigator.clipboard&&navigator.clipboard.writeText(window.location.href).then(function(){var t=document.getElementById('toast');if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:10px 18px;font-size:13px;z-index:9999;border-radius:2px';document.body.appendChild(t)}t.textContent='Link copied to clipboard';setTimeout(function(){t.remove()},1800)})}
+document.getElementById('copyBtn').addEventListener('click',copyLink);
+var cl2=document.getElementById('copyLink2');if(cl2)cl2.addEventListener('click',function(e){e.preventDefault();copyLink()});
+
+// fade in
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.body h2, .body h3, .stats, .chartbox, .takeaways, .pullquote, .inline-img, .rec-card').forEach(function(el){el.classList.add('fade');io.observe(el)});
+
+// keyboard
+document.addEventListener('keydown',function(e){if(e.key==='b'&&!e.target.matches('input,textarea')){window.scrollTo({top:0,behavior:'smooth'})}if(e.key==='p'&&e.ctrlKey){/* native */}});
+</script>
+</body>
+</html>
