@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
       <nav className="fixed w-full top-0 z-50 bg-[#030712]/90 backdrop-blur-md border-b border-gray-800/80">
         <div className="max-w-4xl mx-auto px-6 py-5">
           <div className="text-2xl font-black tracking-tighter text-white text-center">
-            CryptomonnaieGrand livre
+            Monde Quotidien
           </div>
         </div>
       </nav>
@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
 
         <section className="space-y-6">
           <h2 className="text-2xl font-bold text-white">Introduction</h2>
-          <p>Bienvenue sur CryptomonnaieGrand livre. Nous respectons votre vie privée et nous nous engageons à protéger vos données personnelles. Cette politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos informations lorsque vous visitez notre site Web.</p>
+          <p>Bienvenue sur Monde Quotidien. Nous respectons votre vie privée et nous nous engageons à protéger vos données personnelles. Cette politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos informations lorsque vous visitez notre site Web.</p>
 
           <h2 className="text-2xl font-bold text-white">Informations que Nous Collectons</h2>
           <p>Nous collectons des informations pour fournir de meilleurs services à tous nos utilisateurs. Les informations que nous collectons dépendent de la façon dont vous utilisez nos services.</p>
