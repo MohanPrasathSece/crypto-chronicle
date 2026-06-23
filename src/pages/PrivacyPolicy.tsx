@@ -12,57 +12,57 @@ export default function PrivacyPolicy() {
       </nav>
 
       <main className="max-w-4xl mx-auto px-6 py-12 prose prose-invert prose-emerald lg:prose-lg">
-        <h1 className="text-4xl font-black text-white mb-8">Privacy Policy</h1>
-        <p className="text-sm text-gray-500 mb-12">Last Updated Date: June 23, 2026</p>
+        <h1 className="text-4xl font-black text-white mb-8">Politique de Confidentialité</h1>
+        <p className="text-sm text-gray-500 mb-12">Date de Dernière Mise à Jour : 23 Juin 2026</p>
 
         <section className="space-y-6">
           <h2 className="text-2xl font-bold text-white">Introduction</h2>
-          <p>Welcome to CryptoLedger. We respect your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website.</p>
+          <p>Bienvenue sur Monde Quotidien. Nous respectons votre vie privée et nous nous engageons à protéger vos données personnelles. Cette politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos informations lorsque vous visitez notre site Web.</p>
 
-          <h2 className="text-2xl font-bold text-white">Information We Collect</h2>
-          <p>We collect information to provide better services to all our users. The information we collect depends on how you use our services.</p>
+          <h2 className="text-2xl font-bold text-white">Informations que Nous Collectons</h2>
+          <p>Nous collectons des informations pour fournir de meilleurs services à tous nos utilisateurs. Les informations que nous collectons dépendent de la façon dont vous utilisez nos services.</p>
 
-          <h2 className="text-2xl font-bold text-white">Information You Voluntarily Provide</h2>
-          <p>When you fill out our enquiry forms, we collect the personal information you give us, which includes your Name, Email Address, Phone Number, and any Message you provide.</p>
+          <h2 className="text-2xl font-bold text-white">Informations que Vous Fournissez Volontairement</h2>
+          <p>Lorsque vous remplissez nos formulaires de demande, nous collectons les informations personnelles que vous nous fournissez, qui comprennent votre Nom, Adresse E-mail, Numéro de Téléphone et tout Message que vous fournissez.</p>
 
-          <h2 className="text-2xl font-bold text-white">Automatically Collected Information</h2>
-          <p>We automatically collect certain information when you visit, use, or navigate the website. This information does not reveal your specific identity but may include device and usage information, such as your IP address, browser and device characteristics, operating system, and language preferences.</p>
+          <h2 className="text-2xl font-bold text-white">Informations Collectées Automatiquement</h2>
+          <p>Nous collectons automatiquement certaines informations lorsque vous visitez, utilisez ou naviguez sur le site Web. Ces informations ne révèlent pas votre identité spécifique mais peuvent inclure des informations sur l'appareil et l'utilisation, telles que votre adresse IP, les caractéristiques du navigateur et de l'appareil, le système d'exploitation et les préférences linguistiques.</p>
 
-          <h2 className="text-2xl font-bold text-white">Purpose of Data Collection</h2>
-          <p>Personal information is used exclusively for responding to your enquiries, facilitating customer communication, and improving our educational services.</p>
+          <h2 className="text-2xl font-bold text-white">Finalité de la Collecte de Données</h2>
+          <p>Les informations personnelles sont utilisées exclusivement pour répondre à vos demandes, faciliter la communication avec les clients et améliorer nos services éducatifs.</p>
 
-          <h2 className="text-2xl font-bold text-white">CRM & Third-Party Service Providers</h2>
-          <p>Information submitted through our enquiry forms is securely transmitted to our Customer Relationship Management (CRM) system for lead management. The website uses secure server-side processing for this transmission. <strong>No sensitive CRM credentials are ever exposed to users.</strong> We do not share your personal information with unaffiliated third parties for their own marketing purposes.</p>
+          <h2 className="text-2xl font-bold text-white">CRM et Fournisseurs de Services Tiers</h2>
+          <p>Les informations soumises via nos formulaires de demande sont transmises en toute sécurité à notre système de gestion de la relation client (CRM) pour la gestion des leads. Le site Web utilise un traitement sécurisé côté serveur pour cette transmission. <strong>Aucune information d'identification CRM sensible n'est jamais exposée aux utilisateurs.</strong> Nous ne partageons pas vos informations personnelles avec des tiers non affiliés à leurs propres fins de marketing.</p>
 
-          <h2 className="text-2xl font-bold text-white">Cookies and Tracking Technologies</h2>
-          <p>We use cookies and similar tracking technologies to access or store information, maintain security, and understand how our website is used. You can set your browser to refuse all or some browser cookies, but this may affect your user experience.</p>
+          <h2 className="text-2xl font-bold text-white">Cookies et Technologies de Suivi</h2>
+          <p>Nous utilisons des cookies et des technologies de suivi similaires pour accéder ou stocker des informations, maintenir la sécurité et comprendre comment notre site Web est utilisé. Vous pouvez configurer votre navigateur pour qu'il refuse tout ou partie des cookies du navigateur, mais cela peut affecter votre expérience utilisateur.</p>
 
-          <h2 className="text-2xl font-bold text-white">Data Security</h2>
-          <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please remember that we cannot guarantee that the internet itself is 100% secure.</p>
+          <h2 className="text-2xl font-bold text-white">Sécurité des Données</h2>
+          <p>Nous avons mis en œuvre des mesures de sécurité techniques et organisationnelles appropriées conçues pour protéger la sécurité de toutes les informations personnelles que nous traitons. Cependant, n'oubliez pas que nous ne pouvons garantir que l'Internet lui-même est sécurisé à 100 %.</p>
 
-          <h2 className="text-2xl font-bold text-white">Data Retention</h2>
-          <p>We will only keep your personal information for as long as it is necessary for the purposes set out in this privacy policy, unless a longer retention period is required or permitted by law.</p>
+          <h2 className="text-2xl font-bold text-white">Conservation des Données</h2>
+          <p>Nous ne conserverons vos informations personnelles que le temps nécessaire aux fins énoncées dans la présente politique de confidentialité, à moins qu'une période de conservation plus longue ne soit requise ou autorisée par la loi.</p>
 
-          <h2 className="text-2xl font-bold text-white">International Data Transfers</h2>
-          <p>Your information may be transferred to, and maintained on, computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ.</p>
+          <h2 className="text-2xl font-bold text-white">Transferts Internationaux de Données</h2>
+          <p>Vos informations peuvent être transférées vers, et conservées sur, des ordinateurs situés en dehors de votre état, province, pays ou autre juridiction gouvernementale où les lois sur la protection des données peuvent différer.</p>
 
-          <h2 className="text-2xl font-bold text-white">User Rights</h2>
-          <p>Depending on your location, you may have rights under applicable data protection laws to access, correct, or delete your personal data. Please contact us to exercise these rights.</p>
+          <h2 className="text-2xl font-bold text-white">Droits de l'Utilisateur</h2>
+          <p>Selon votre emplacement, vous pouvez avoir des droits en vertu des lois applicables sur la protection des données pour accéder, corriger ou supprimer vos données personnelles. Veuillez nous contacter pour exercer ces droits.</p>
 
-          <h2 className="text-2xl font-bold text-white">Marketing Communications</h2>
-          <p>You may opt-out of receiving marketing communications from us at any time by utilizing the unsubscribe link in our emails or contacting us directly.</p>
+          <h2 className="text-2xl font-bold text-white">Communications Marketing</h2>
+          <p>Vous pouvez vous désinscrire de la réception de communications marketing de notre part à tout moment en utilisant le lien de désinscription dans nos e-mails ou en nous contactant directement.</p>
 
-          <h2 className="text-2xl font-bold text-white">Children's Privacy</h2>
-          <p>Our website is not intended for children under 18 years of age. We do not knowingly collect personal information from children under 18.</p>
+          <h2 className="text-2xl font-bold text-white">Confidentialité des Enfants</h2>
+          <p>Notre site Web n'est pas destiné aux enfants de moins de 18 ans. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 18 ans.</p>
 
-          <h2 className="text-2xl font-bold text-white">Third-Party Websites</h2>
-          <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or the content of those third-party websites.</p>
+          <h2 className="text-2xl font-bold text-white">Sites Web Tiers</h2>
+          <p>Notre site Web peut contenir des liens vers des sites Web tiers. Nous ne sommes pas responsables des pratiques de confidentialité ou du contenu de ces sites Web tiers.</p>
 
-          <h2 className="text-2xl font-bold text-white">Policy Updates</h2>
-          <p>We may update this Privacy Policy from time to time in order to reflect changes to our practices or for other operational, legal, or regulatory reasons.</p>
+          <h2 className="text-2xl font-bold text-white">Mises à Jour de la Politique</h2>
+          <p>Nous pouvons mettre à jour cette politique de confidentialité de temps à autre afin de refléter les changements de nos pratiques ou pour d'autres raisons opérationnelles, légales ou réglementaires.</p>
 
-          <h2 className="text-2xl font-bold text-white">Contact Information</h2>
-          <p>If you have questions or comments about this policy, you may email us or contact us via our website enquiry forms.</p>
+          <h2 className="text-2xl font-bold text-white">Coordonnées</h2>
+          <p>Si vous avez des questions ou des commentaires sur cette politique, vous pouvez nous envoyer un e-mail ou nous contacter via nos formulaires de demande sur le site Web.</p>
         </section>
       </main>
 

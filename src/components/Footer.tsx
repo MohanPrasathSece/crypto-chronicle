@@ -8,16 +8,16 @@ export default function Footer() {
           Crypto<span className="text-emerald-500">Ledger</span>
         </div>
         <p className="text-gray-500 text-sm max-w-2xl mx-auto leading-relaxed mb-6">
-          Disclaimer: Cryptocurrency trading involves significant risk and can result in the loss of your invested capital. The website is for educational and informational purposes only. Nothing on the website constitutes financial, investment, legal, or tax advice. You should not invest more than you can afford to lose. The website does not guarantee profits or investment returns.
+          Avis de non-responsabilité : Le trading de cryptomonnaies implique des risques importants et peut entraîner la perte de votre capital investi. Le site Web est à des fins éducatives et informatives uniquement. Rien sur le site Web ne constitue des conseils financiers, d'investissement, juridiques ou fiscaux. Vous ne devriez pas investir plus que ce que vous pouvez vous permettre de perdre. Le site Web ne garantit pas les bénéfices ou les retours sur investissement.
         </p>
         
         <div className="flex justify-center gap-6 mb-8 text-sm font-medium">
-          <Link to="/privacy-policy" className="text-gray-400 hover:text-emerald-500 transition-colors">Privacy Policy</Link>
-          <Link to="/terms-and-conditions" className="text-gray-400 hover:text-emerald-500 transition-colors">Terms & Conditions</Link>
+          <Link to="/privacy-policy" className="text-gray-400 hover:text-emerald-500 transition-colors">Politique de Confidentialité</Link>
+          <Link to="/terms-and-conditions" className="text-gray-400 hover:text-emerald-500 transition-colors">Conditions Générales</Link>
         </div>
 
         <div className="text-gray-600 text-sm">
-          &copy; 2026 CryptoLedger Holdings Ltd. All rights reserved.
+          &copy; 2026 Monde Quotidien Holdings Ltd. Tous droits réservés.
         </div>
       </div>
     </footer>

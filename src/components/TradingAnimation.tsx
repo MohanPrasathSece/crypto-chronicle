@@ -44,7 +44,7 @@ export default function TradingAnimation() {
         animate={{ opacity: [0.5, 1, 0.5] }}
         transition={{ duration: 1.5, repeat: Infinity }}
       >
-        ● LIVE BTC/USD
+        ● EN DIRECT BTC/USD
       </motion.div>
     </div>
   );
