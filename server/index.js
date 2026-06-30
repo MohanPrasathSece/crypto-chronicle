@@ -12,20 +12,38 @@ app.post('/api/leads', async (req, res) => {
   try {
     const { name, email, phone, message } = req.body;
     
-    // Split name into first and last
-    const nameParts = (name || '').trim().split(' ');
-    const firstName = nameParts[0] || '';
-    const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+    const [first_name, ...lastNameParts] = (name || "Unknown").trim().split(" ");
+    const last_name = lastNameParts.length > 0 ? lastNameParts.join(" ") : "Lead";
+
+    let formattedPhone = (phone || "").replace(/[^0-9+]/g, '');
+    if (formattedPhone) {
+      if (formattedPhone.startsWith('+')) {
+        formattedPhone = '00' + formattedPhone.slice(1);
+      }
+      if (formattedPhone.startsWith('41') && formattedPhone.length === 11) {
+        formattedPhone = '00' + formattedPhone;
+      }
+      if (!formattedPhone.startsWith('0041')) {
+        if (formattedPhone.startsWith('0') && !formattedPhone.startsWith('00')) {
+          formattedPhone = '0041' + formattedPhone.slice(1);
+        } else if (!formattedPhone.startsWith('00')) {
+          formattedPhone = '0041' + formattedPhone;
+        }
+      }
+    } else {
+      formattedPhone = "0000000000";
+    }
 
     const payload = {
-      country_name: "cy",
-      description: message || "",
-      phone: phone || "",
+      country_name: "ch",
+      description: message || "Signup Lead",
+      phone: formattedPhone,
       email: email || "",
-      first_name: firstName,
-      last_name: lastName,
+      first_name: first_name,
+      last_name: last_name,
       custom_fields: {
-        Source_ID: "Website",
+        Source_ID: "website",
+        How_Much_Invested: "0",
         Outline_Your_Case: message || ""
       }
     };

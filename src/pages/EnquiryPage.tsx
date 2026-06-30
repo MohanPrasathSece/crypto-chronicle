@@ -6,13 +6,27 @@ import Footer from "../components/Footer";
 export default function EnquiryPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [phoneError, setPhoneError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setPhoneError("");
     
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
+
+    const phone = (data.phone as string) || "";
+    const cleanNum = phone.replace(/\s+/g, "");
+    if (!cleanNum) {
+      setPhoneError("Veuillez entrer un numéro de téléphone");
+      setIsSubmitting(false);
+      return;
+    } else if (!/^(\+41|0041|0)?[1-9]\d{8}$/.test(cleanNum)) {
+      setPhoneError("Veuillez entrer un numéro suisse valide (ex: 079 123 45 67)");
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch('/api/leads', {
@@ -142,6 +156,7 @@ export default function EnquiryPage() {
                   <div className="space-y-1.5">
                     <label htmlFor="phone" className="block text-xs font-semibold text-gray-400 uppercase tracking-wider">Numéro de Téléphone</label>
                     <input required type="tel" id="phone" name="phone" className="w-full bg-[#030712] border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all placeholder-gray-600" placeholder="+33 6 00 00 00 00" />
+                    {phoneError && <p className="text-red-500 text-sm mt-1">{phoneError}</p>}
                   </div>
 
                   <div className="space-y-1.5">
