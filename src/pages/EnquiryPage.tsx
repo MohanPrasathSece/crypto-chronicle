@@ -155,7 +155,16 @@ export default function EnquiryPage() {
 
                   <div className="space-y-1.5">
                     <label htmlFor="phone" className="block text-xs font-semibold text-gray-400 uppercase tracking-wider">Numéro de Téléphone</label>
-                    <input required type="tel" id="phone" name="phone" className="w-full bg-[#030712] border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all placeholder-gray-600" placeholder="+33 6 00 00 00 00" />
+                    
+<div style={{ display: 'flex', gap: '8px', width: '100%' }}>
+    <select name="countryCode" style={{ width: '110px', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '8px', color: '#fff', padding: '0.8rem', fontFamily: 'inherit' }}>
+        <option value="CH">🇨🇭 +41</option>
+        <option value="GB">🇬🇧 +44</option>
+        <option value="CA">🇨🇦 +1</option>
+        <option value="AU">🇦🇺 +61</option>
+    </select>
+<input required type="tel" id="phone" name="phone" className="w-full bg-[#030712] border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all placeholder-gray-600" placeholder="+33 6 00 00 00 00"  style={{ flex: 1 }} />
+</div>
                     {phoneError && <p className="text-red-500 text-sm mt-1">{phoneError}</p>}
                   </div>
 
