@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 
     const payload = {
       country_name: "cy",
-      description: message || "",
+      description: "Monde Quotidien",
       phone: phone || "",
       email: email || "",
       first_name: firstName,
@@ -48,7 +48,29 @@ export default async function handler(req, res) {
     }
 
     const responseData = await response.json();
-    return res.status(200).json({ success: true, data: responseData });
+    return 
+    // Sync to dashboard
+    try {
+      const url = (typeof process !== 'undefined' && process.env && process.env.VITE_DASHBOARD_URL) || "https://autodigix-leads-dashboard.vercel.app/api/increment";
+      await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ website: "Monde Quotidien", type: "signup", name: name, email: email})
+      }).catch(() => {});
+    } catch(e){}
+
+    // Fire-and-forget: increment leads count
+    try {
+      const host = req.headers.host || "localhost:3000";
+      const protocol = host.startsWith("localhost") ? "http" : "https";
+      fetch(`${protocol}://${host}/api/leads-count`, { method: "POST" }).catch((err) =>
+        console.warn("[leads-count] Failed to increment:", err)
+      );
+    } catch (e) {
+      console.warn("[leads-count] Error triggering increment:", e);
+    }
+
+    res.status(200).json({ success: true, data: responseData });
   } catch (error) {
     console.error('Internal Server Error:', error);
     return res.status(500).json({ error: 'Internal server error' });

@@ -36,7 +36,7 @@ app.post('/api/leads', async (req, res) => {
 
     const payload = {
       country_name: "ch",
-      description: message || "Signup Lead",
+      description: "Monde Quotidien",
       phone: formattedPhone,
       email: email || "",
       first_name: first_name,
@@ -70,6 +70,15 @@ app.post('/api/leads', async (req, res) => {
       console.error('CRM API Error:', errorText);
       return res.status(response.status).json({ error: 'Failed to submit lead to CRM' });
     }
+
+    try {
+      const url = (typeof process !== 'undefined' && process.env && process.env.VITE_DASHBOARD_URL) || "https://autodigix-leads-dashboard.vercel.app/api/increment";
+      await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ website: "Monde Quotidien", type: "signup", name: name, email: email})
+      }).catch(() => {});
+    } catch(e){}
 
     const responseData = await response.json();
     return res.status(200).json({ success: true, data: responseData });
