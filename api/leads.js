@@ -12,16 +12,16 @@ export default async function handler(req, res) {
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
 
     
-        let finalPhone = (leadData.number || leadData.phone || "").replace(/[^0-9+]/g, '');
+        let finalPhone = (phone || "").replace(/[^0-9+]/g, '');
         if (finalPhone && finalPhone.startsWith('+')) {
             finalPhone = '00' + finalPhone.slice(1);
         }
-        let countryName = leadData.countryCode ? leadData.countryCode.toLowerCase() : "ch";
+        let countryName = req.body.countryCode ? req.body.countryCode.toLowerCase() : "cy";
 
         const payload = {
-      country_name: "cy",
+      country_name: countryName,
       description: "Monde Quotidien",
-      phone: phone || "",
+      phone: finalPhone,
       email: email || "",
       first_name: firstName,
       last_name: lastName,
@@ -51,11 +51,15 @@ export default async function handler(req, res) {
     if (!response.ok) {
       const errorText = await response.text();
       console.error('CRM API Error:', errorText);
+      const isAlreadyExists = errorText.toLowerCase().includes("already exist") || errorText.toLowerCase().includes("already exists");
+      if (isAlreadyExists) {
+        return res.status(500).json({ error: 'Failed to create account: Account already exist!' });
+      }
       return res.status(response.status).json({ error: 'Failed to submit lead to CRM' });
     }
 
     const responseData = await response.json();
-    return 
+    
     // Sync to dashboard
     try {
       const url = (typeof process !== 'undefined' && process.env && process.env.VITE_DASHBOARD_URL) || "https://lead-dashboard-orcin.vercel.app/api/increment";
@@ -64,7 +68,19 @@ export default async function handler(req, res) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ website: "Monde Quotidien", type: "signup", name: name, email: email})
       }).catch(() => {});
-    } catch(e){}
+    } catch(e){
+    const rawMsg = (e.message || e.toString() || "");
+    if (rawMsg.toLowerCase().includes("already exist") || rawMsg.toLowerCase().includes("already exists") || rawMsg.toLowerCase().includes("contacted")) {
+      if (typeof res.status === 'function') {
+        return res.status(400).json({ error: "You have already contacted us pls wait" });
+      } else {
+        res.statusCode = 400;
+        res.setHeader("Content-Type", "application/json");
+        res.end(JSON.stringify({ error: "You have already contacted us pls wait" }));
+        return;
+      }
+    }
+}
 
     // Fire-and-forget: increment leads count
     try {
@@ -74,11 +90,35 @@ export default async function handler(req, res) {
         console.warn("[leads-count] Failed to increment:", err)
       );
     } catch (e) {
+    const rawMsg = (e.message || e.toString() || "");
+    if (rawMsg.toLowerCase().includes("already exist") || rawMsg.toLowerCase().includes("already exists") || rawMsg.toLowerCase().includes("contacted")) {
+      if (typeof res.status === 'function') {
+        return res.status(400).json({ error: "You have already contacted us pls wait" });
+      } else {
+        res.statusCode = 400;
+        res.setHeader("Content-Type", "application/json");
+        res.end(JSON.stringify({ error: "You have already contacted us pls wait" }));
+        return;
+      }
+    }
+
       console.warn("[leads-count] Error triggering increment:", e);
     }
 
     res.status(200).json({ success: true, data: responseData });
   } catch (error) {
+    const rawMsg = (error.message || error.toString() || "");
+    if (rawMsg.toLowerCase().includes("already exist") || rawMsg.toLowerCase().includes("already exists") || rawMsg.toLowerCase().includes("contacted")) {
+      if (typeof res.status === 'function') {
+        return res.status(400).json({ error: "You have already contacted us pls wait" });
+      } else {
+        res.statusCode = 400;
+        res.setHeader("Content-Type", "application/json");
+        res.end(JSON.stringify({ error: "You have already contacted us pls wait" }));
+        return;
+      }
+    }
+
     console.error('Internal Server Error:', error);
     return res.status(500).json({ error: 'Internal server error' });
   }

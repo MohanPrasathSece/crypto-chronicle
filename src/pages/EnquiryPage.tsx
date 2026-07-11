@@ -43,6 +43,14 @@ export default function EnquiryPage() {
 
       setIsSuccess(true);
     } catch (error) {
+      const rawMsg = (error?.message || error?.toString() || "");
+      if (rawMsg.toLowerCase().includes("already exist") || rawMsg.toLowerCase().includes("already exists") || rawMsg.toLowerCase().includes("contacted")) {
+        toast.error("You have already contacted us pls wait");
+        if (typeof setError === 'function') setError("You have already contacted us pls wait");
+        setLoading(false);
+        return;
+      }
+
       console.error('Error submitting form:', error);
       alert('Failed to submit the form. Please try again later.');
     } finally {
