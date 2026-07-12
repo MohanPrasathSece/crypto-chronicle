@@ -25,21 +25,9 @@ export default function EnquiryPage() {
     const cCode = typeof data !== 'undefined' && data.countryCode ? data.countryCode : (typeof countryCode !== 'undefined' ? countryCode : 'CH');
     const expectedLen = phoneLengths[cCode as string] || 9;
     if (cleanNum && (cleanNum.length < expectedLen - 1 || cleanNum.length > expectedLen + 2)) {
-      if (typeof setPhoneError !== 'undefined') {
-        setPhoneError(`Veuillez entrer un numéro valide pour le pays sélectionné (${expectedLen} chiffres attendus)`);
-        if (typeof setIsSubmitting !== 'undefined') setIsSubmitting(false);
-        if (typeof setLoading !== 'undefined') setLoading(false);
-        return;
-      }
-      if (typeof setError !== 'undefined') {
-        setError(`Veuillez entrer un numéro valide pour le pays sélectionné (${expectedLen} chiffres attendus)`);
-        if (typeof setIsSubmitting !== 'undefined') setIsSubmitting(false);
-        if (typeof setLoading !== 'undefined') setLoading(false);
-        return;
-      }
-      if (typeof errs !== 'undefined') {
-        errs.phone = `Veuillez entrer un numéro valide pour le pays sélectionné (${expectedLen} chiffres attendus)`;
-      }
+      setPhoneError(`Veuillez entrer un numéro valide pour le pays sélectionné (${expectedLen} chiffres attendus)`);
+      setIsSubmitting(false);
+      return;
     }
 
     if (!cleanNum) {
