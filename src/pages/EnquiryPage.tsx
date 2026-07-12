@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import TradingAnimation from "../components/TradingAnimation";
 import Footer from "../components/Footer";
+import { toast } from "sonner";
 
 export default function EnquiryPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,9 +46,9 @@ export default function EnquiryPage() {
     } catch (error: any) {
       const rawMsg = (error?.message || error?.toString() || "");
       if (rawMsg.toLowerCase().includes("already exist") || rawMsg.toLowerCase().includes("already exists") || rawMsg.toLowerCase().includes("contacted")) {
+        toast.success("Vous nous avez déjà contactés. Veuillez patienter.");
         return;
       }
-
       console.error('Error submitting form:', error);
       alert('Failed to submit the form. Please try again later.');
     } finally {
