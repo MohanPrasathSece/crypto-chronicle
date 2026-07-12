@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import TradingAnimation from "../components/TradingAnimation";
 import Footer from "../components/Footer";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 
 export default function EnquiryPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -189,28 +190,33 @@ export default function EnquiryPage() {
                     <label htmlFor="phone" className="block text-xs font-semibold text-gray-400 uppercase tracking-wider">Numéro de Téléphone</label>
                     
 <div style={{ display: 'flex', gap: '8px', width: '100%' }}>
-    <select name="countryCode" style={{ width: '110px', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '8px', color: '#fff', padding: '0.8rem', fontFamily: 'inherit' }}>
-        <option value="CH">🇨🇭 +41</option>
-        <option value="FR">🇫🇷 +33</option>
-        <option value="BE">🇧🇪 +32</option>
-        <option value="CA">🇨🇦 +1</option>
-        <option value="US">🇺🇸 +1</option>
-        <option value="GB">🇬🇧 +44</option>
-        <option value="DE">🇩🇪 +49</option>
-        <option value="ES">🇪🇸 +34</option>
-        <option value="IT">🇮🇹 +39</option>
-        <option value="NL">🇳🇱 +31</option>
-        <option value="SE">🇸🇪 +46</option>
-        <option value="AU">🇦🇺 +61</option>
-        <option value="IN">🇮🇳 +91</option>
-        <option value="AE">🇦🇪 +971</option>
-        <option value="SG">🇸🇬 +65</option>
-        <option value="ZA">🇿🇦 +27</option>
-        <option value="BR">🇧🇷 +55</option>
-        <option value="MX">🇲🇽 +52</option>
-        <option value="JP">🇯🇵 +81</option>
-        <option value="CY">🇨🇾 +357</option>
-    </select>
+    <Select name="countryCode" defaultValue="CH">
+        <SelectTrigger className="w-[120px] h-[50px] bg-[#030712] border border-gray-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all">
+            <SelectValue placeholder="Pays" />
+        </SelectTrigger>
+        <SelectContent position="popper" side="bottom" className="bg-[#0a0f1c] text-white border-gray-800 rounded-xl shadow-xl max-h-[300px]">
+            <SelectItem value="CH" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇨🇭 +41</SelectItem>
+            <SelectItem value="FR" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇫🇷 +33</SelectItem>
+            <SelectItem value="BE" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇧🇪 +32</SelectItem>
+            <SelectItem value="CA" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇨🇦 +1</SelectItem>
+            <SelectItem value="US" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇺🇸 +1</SelectItem>
+            <SelectItem value="GB" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇬🇧 +44</SelectItem>
+            <SelectItem value="DE" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇩🇪 +49</SelectItem>
+            <SelectItem value="ES" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇪🇸 +34</SelectItem>
+            <SelectItem value="IT" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇮🇹 +39</SelectItem>
+            <SelectItem value="NL" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇳🇱 +31</SelectItem>
+            <SelectItem value="SE" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇸🇪 +46</SelectItem>
+            <SelectItem value="AU" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇦🇺 +61</SelectItem>
+            <SelectItem value="IN" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇮🇳 +91</SelectItem>
+            <SelectItem value="AE" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇦🇪 +971</SelectItem>
+            <SelectItem value="SG" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇸🇬 +65</SelectItem>
+            <SelectItem value="ZA" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇿🇦 +27</SelectItem>
+            <SelectItem value="BR" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇧🇷 +55</SelectItem>
+            <SelectItem value="MX" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇲🇽 +52</SelectItem>
+            <SelectItem value="JP" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇯🇵 +81</SelectItem>
+            <SelectItem value="CY" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇨🇾 +357</SelectItem>
+        </SelectContent>
+    </Select>
 <input required type="tel" id="phone" name="phone" className="w-full bg-[#030712] border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all placeholder-gray-600" placeholder="+33 6 00 00 00 00"  style={{ flex: 1 }} />
 </div>
                     {phoneError && <p className="text-red-500 text-sm mt-1">{phoneError}</p>}
