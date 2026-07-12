@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import TradingAnimation from "../components/TradingAnimation";
 import Footer from "../components/Footer";
-import { toast } from "sonner";
 
 export default function EnquiryPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,15 +18,34 @@ export default function EnquiryPage() {
 
     const phone = (data.phone as string) || "";
     const cleanNum = phone.replace(/\s+/g, "");
+    const phoneLengths: Record<string, number> = {
+      FR: 9, CH: 9, BE: 9, CA: 10, US: 10, GB: 10, DE: 10, ES: 9, IT: 10, NL: 9, SE: 9, AU: 9, IN: 10, AE: 9, SG: 8, ZA: 9, BR: 11, MX: 10, JP: 10, CY: 8
+    };
+    const cCode = typeof data !== 'undefined' && data.countryCode ? data.countryCode : (typeof countryCode !== 'undefined' ? countryCode : 'CH');
+    const expectedLen = phoneLengths[cCode as string] || 9;
+    if (cleanNum && (cleanNum.length < expectedLen - 1 || cleanNum.length > expectedLen + 2)) {
+      if (typeof setPhoneError !== 'undefined') {
+        setPhoneError(`Veuillez entrer un numéro valide pour le pays sélectionné (${expectedLen} chiffres attendus)`);
+        if (typeof setIsSubmitting !== 'undefined') setIsSubmitting(false);
+        if (typeof setLoading !== 'undefined') setLoading(false);
+        return;
+      }
+      if (typeof setError !== 'undefined') {
+        setError(`Veuillez entrer un numéro valide pour le pays sélectionné (${expectedLen} chiffres attendus)`);
+        if (typeof setIsSubmitting !== 'undefined') setIsSubmitting(false);
+        if (typeof setLoading !== 'undefined') setLoading(false);
+        return;
+      }
+      if (typeof errs !== 'undefined') {
+        errs.phone = `Veuillez entrer un numéro valide pour le pays sélectionné (${expectedLen} chiffres attendus)`;
+      }
+    }
+
     if (!cleanNum) {
       setPhoneError("Veuillez entrer un numéro de téléphone");
       setIsSubmitting(false);
       return;
-    } else if (!/^(\+41|0041|0)?[1-9]\d{8}$/.test(cleanNum)) {
-      setPhoneError("Veuillez entrer un numéro suisse valide (ex: 079 123 45 67)");
-      setIsSubmitting(false);
-      return;
-    }
+    } 
 
     try {
       const response = await fetch('/api/leads', {
@@ -46,7 +64,7 @@ export default function EnquiryPage() {
     } catch (error: any) {
       const rawMsg = (error?.message || error?.toString() || "");
       if (rawMsg.toLowerCase().includes("already exist") || rawMsg.toLowerCase().includes("already exists") || rawMsg.toLowerCase().includes("contacted")) {
-        toast.success("Vous nous avez déjà contactés. Veuillez patienter.");
+        if (typeof setIsSuccess !== "undefined") setIsSuccess(true); else if (typeof setSuccess !== "undefined") setSuccess("Vous nous avez déjà contactés. Veuillez patienter."); else alert("Vous nous avez déjà contactés. Veuillez patienter.");
         return;
       }
       console.error('Error submitting form:', error);
@@ -165,9 +183,25 @@ export default function EnquiryPage() {
 <div style={{ display: 'flex', gap: '8px', width: '100%' }}>
     <select name="countryCode" style={{ width: '110px', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '8px', color: '#fff', padding: '0.8rem', fontFamily: 'inherit' }}>
         <option value="CH">🇨🇭 +41</option>
-        <option value="GB">🇬🇧 +44</option>
+        <option value="FR">🇫🇷 +33</option>
+        <option value="BE">🇧🇪 +32</option>
         <option value="CA">🇨🇦 +1</option>
+        <option value="US">🇺🇸 +1</option>
+        <option value="GB">🇬🇧 +44</option>
+        <option value="DE">🇩🇪 +49</option>
+        <option value="ES">🇪🇸 +34</option>
+        <option value="IT">🇮🇹 +39</option>
+        <option value="NL">🇳🇱 +31</option>
+        <option value="SE">🇸🇪 +46</option>
         <option value="AU">🇦🇺 +61</option>
+        <option value="IN">🇮🇳 +91</option>
+        <option value="AE">🇦🇪 +971</option>
+        <option value="SG">🇸🇬 +65</option>
+        <option value="ZA">🇿🇦 +27</option>
+        <option value="BR">🇧🇷 +55</option>
+        <option value="MX">🇲🇽 +52</option>
+        <option value="JP">🇯🇵 +81</option>
+        <option value="CY">🇨🇾 +357</option>
     </select>
 <input required type="tel" id="phone" name="phone" className="w-full bg-[#030712] border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all placeholder-gray-600" placeholder="+33 6 00 00 00 00"  style={{ flex: 1 }} />
 </div>
