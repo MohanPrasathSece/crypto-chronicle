@@ -17,12 +17,18 @@ export default function EnquiryPage() {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
 
+    if (!data.countryCode) {
+      setPhoneError("Veuillez sélectionner un pays");
+      setIsSubmitting(false);
+      return;
+    }
+
     const phone = (data.phone as string) || "";
     const cleanNum = phone.replace(/\s+/g, "");
     const phoneLengths: Record<string, number> = {
       FR: 9, CH: 9, BE: 9, CA: 10, US: 10, GB: 10, DE: 10, ES: 9, IT: 10, NL: 9, SE: 9, AU: 9, IN: 10, AE: 9, SG: 8, ZA: 9, BR: 11, MX: 10, JP: 10, CY: 8
     };
-    const cCode = typeof data !== 'undefined' && data.countryCode ? data.countryCode : (typeof countryCode !== 'undefined' ? countryCode : 'CH');
+    const cCode = data.countryCode as string;
     const expectedLen = phoneLengths[cCode as string] || 9;
     if (cleanNum && (cleanNum.length < expectedLen - 1 || cleanNum.length > expectedLen + 2)) {
       setPhoneError(`Veuillez entrer un numéro valide pour le pays sélectionné (${expectedLen} chiffres attendus)`);
@@ -178,7 +184,7 @@ export default function EnquiryPage() {
                     <label htmlFor="phone" className="block text-xs font-semibold text-gray-400 uppercase tracking-wider">Numéro de Téléphone</label>
                     
 <div style={{ display: 'flex', gap: '8px', width: '100%' }}>
-    <Select name="countryCode" defaultValue="CH">
+    <Select name="countryCode" required>
         <SelectTrigger className="w-[120px] h-[50px] bg-[#030712] border border-gray-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all">
             <SelectValue placeholder="Pays" />
         </SelectTrigger>
