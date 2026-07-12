@@ -224,7 +224,7 @@ export default function EnquiryPage() {
 
                   <div className="space-y-1.5">
                     <label htmlFor="message" className="block text-xs font-semibold text-gray-400 uppercase tracking-wider">Message</label>
-                    <textarea required id="message" name="message" rows={3} className="w-full bg-[#030712] border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all placeholder-gray-600 resize-none" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                    <textarea id="message" name="message" rows={3} className="w-full bg-[#030712] border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all placeholder-gray-600 resize-none" placeholder="Comment pouvons-nous vous aider ?"></textarea>
                   </div>
 
                   <button 
