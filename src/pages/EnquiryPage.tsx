@@ -57,14 +57,22 @@ export default function EnquiryPage() {
       });
 
       if (!response.ok) {
-        throw new Error('Submission failed');
+        let errData;
+        try {
+          errData = await response.json();
+        } catch(e) {}
+        throw new Error(errData?.error || 'Submission failed');
       }
 
       setIsSuccess(true);
     } catch (error: any) {
       const rawMsg = (error?.message || error?.toString() || "");
-      if (rawMsg.toLowerCase().includes("already exist") || rawMsg.toLowerCase().includes("already exists") || rawMsg.toLowerCase().includes("contacted")) {
-        if (typeof setIsSuccess !== "undefined") setIsSuccess(true); else if (typeof setSuccess !== "undefined") setSuccess("Vous nous avez déjà contactés. Veuillez patienter."); else alert("Vous nous avez déjà contactés. Veuillez patienter.");
+      if (rawMsg.includes("Account already exists")) {
+        setPhoneError("You have already contacted us. Our team will get in touch with you soon.");
+        return;
+      }
+      if (rawMsg.includes("Lead is not valid")) {
+        setPhoneError("Please enter a valid email address.");
         return;
       }
       console.error('Error submitting form:', error);

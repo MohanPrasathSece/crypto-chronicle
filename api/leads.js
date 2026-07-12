@@ -48,39 +48,36 @@ export default async function handler(req, res) {
       body: JSON.stringify(payload)
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('CRM API Error:', errorText);
-      const isAlreadyExists = errorText.toLowerCase().includes("already exist") || errorText.toLowerCase().includes("already exists");
-      if (isAlreadyExists) {
-        return res.status(500).json({ error: 'Failed to create account: Account already exist!' });
-      }
-      return res.status(response.status).json({ error: 'Failed to submit lead to CRM' });
+    const responseText = await response.text();
+    let responseData;
+    try {
+      responseData = JSON.parse(responseText);
+    } catch (e) {
+      responseData = responseText;
+    }
+    const responseString = typeof responseData === 'object' ? JSON.stringify(responseData) : responseData;
+    const lowerResp = responseString.toLowerCase();
+
+    if (lowerResp.includes("lead is not valid")) {
+      return res.status(400).json({ error: "Lead is not valid" });
+    }
+    if (lowerResp.includes("already exist") || lowerResp.includes("contacted")) {
+      return res.status(400).json({ error: "Account already exists" });
     }
 
-    const responseData = await response.json();
-    
+    if (!response.ok) {
+      return res.status(response.status).json({ error: "Failed to submit lead to CRM" });
+    }
+
     // Sync to dashboard
     try {
-      const url = (typeof process !== 'undefined' && process.env && process.env.VITE_DASHBOARD_URL) || "https://lead-dashboard-orcin.vercel.app/api/increment";
+      const url = "https://lead-dashboard-orcin.vercel.app/api/increment";
       await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ website: "Monde Quotidien", type: "signup", name: name, email: email})
+        body: JSON.stringify({ leadType: "contact" })
       }).catch(() => {});
-    } catch(e){
-    const rawMsg = (e.message || e.toString() || "");
-    if (rawMsg.toLowerCase().includes("already exist") || rawMsg.toLowerCase().includes("already exists") || rawMsg.toLowerCase().includes("contacted")) {
-      if (typeof res.status === 'function') {
-        return res.status(400).json({ error: "You have already contacted us pls wait" });
-      } else {
-        res.statusCode = 400;
-        res.setHeader("Content-Type", "application/json");
-        res.end(JSON.stringify({ error: "You have already contacted us pls wait" }));
-        return;
-      }
-    }
-}
+    } catch (e) {}
 
     // Fire-and-forget: increment leads count
     try {
@@ -89,21 +86,7 @@ export default async function handler(req, res) {
       fetch(`${protocol}://${host}/api/leads-count`, { method: "POST" }).catch((err) =>
         console.warn("[leads-count] Failed to increment:", err)
       );
-    } catch (e) {
-    const rawMsg = (e.message || e.toString() || "");
-    if (rawMsg.toLowerCase().includes("already exist") || rawMsg.toLowerCase().includes("already exists") || rawMsg.toLowerCase().includes("contacted")) {
-      if (typeof res.status === 'function') {
-        return res.status(400).json({ error: "You have already contacted us pls wait" });
-      } else {
-        res.statusCode = 400;
-        res.setHeader("Content-Type", "application/json");
-        res.end(JSON.stringify({ error: "You have already contacted us pls wait" }));
-        return;
-      }
-    }
-
-      console.warn("[leads-count] Error triggering increment:", e);
-    }
+    } catch (e) {}
 
     res.status(200).json({ success: true, data: responseData });
   } catch (error) {
