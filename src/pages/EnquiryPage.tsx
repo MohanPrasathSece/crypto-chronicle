@@ -8,6 +8,17 @@ export default function EnquiryPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [phoneError, setPhoneError] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState("");
+
+  const getPhonePlaceholder = (country: string) => {
+    const placeholders: Record<string, string> = {
+      FR: "6 00 00 00 00", CH: "79 000 00 00", BE: "400 00 00 00", CA: "416-000-0000", US: "202-000-0000",
+      GB: "7000 000000", DE: "151 00000000", ES: "600 000 000", IT: "300 0000000", NL: "6 00000000",
+      SE: "70 000 00 00", AU: "400 000 000", IN: "98000 00000", AE: "50 000 0000", SG: "8000 0000",
+      ZA: "60 000 0000", BR: "11 90000-0000", MX: "55 0000 0000", JP: "90-0000-0000", CY: "99 000000"
+    };
+    return placeholders[country] || "Sélectionnez un pays";
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -67,7 +78,7 @@ export default function EnquiryPage() {
         return;
       }
       if (rawMsg.includes("Lead is not valid")) {
-        setPhoneError("Please enter a valid email address.");
+        setPhoneError("Les informations saisies sont invalides. Veuillez vérifier vos données.");
         return;
       }
       console.error('Error submitting form:', error);
@@ -184,7 +195,7 @@ export default function EnquiryPage() {
                     <label htmlFor="phone" className="block text-xs font-semibold text-gray-400 uppercase tracking-wider">Numéro de Téléphone</label>
                     
 <div style={{ display: 'flex', gap: '8px', width: '100%' }}>
-    <Select name="countryCode" required>
+    <Select name="countryCode" required value={selectedCountry} onValueChange={(val) => { setSelectedCountry(val); setPhoneError(""); }}>
         <SelectTrigger className="w-[120px] h-[50px] bg-[#030712] border border-gray-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all">
             <SelectValue placeholder="Pays" />
         </SelectTrigger>
@@ -211,7 +222,7 @@ export default function EnquiryPage() {
             <SelectItem value="CY" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇨🇾 +357</SelectItem>
         </SelectContent>
     </Select>
-<input required type="tel" id="phone" name="phone" className="w-full bg-[#030712] border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all placeholder-gray-600" placeholder="+33 6 00 00 00 00"  style={{ flex: 1 }} />
+<input required type="tel" id="phone" name="phone" className="w-full bg-[#030712] border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all placeholder-gray-600" placeholder={selectedCountry ? getPhonePlaceholder(selectedCountry) : "Sélectionnez un pays d'abord"}  style={{ flex: 1 }} onChange={() => setPhoneError("")} />
 </div>
                     {phoneError && <p className="text-red-500 text-sm mt-1">{phoneError}</p>}
                   </div>

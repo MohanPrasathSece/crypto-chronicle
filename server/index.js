@@ -16,32 +16,14 @@ app.post('/api/leads', async (req, res) => {
     const last_name = lastNameParts.length > 0 ? lastNameParts.join(" ") : "Lead";
 
     let formattedPhone = (phone || "").replace(/[^0-9+]/g, '');
-    if (formattedPhone) {
-      if (formattedPhone.startsWith('+')) {
-        formattedPhone = '00' + formattedPhone.slice(1);
-      }
-      if (formattedPhone.startsWith('41') && formattedPhone.length === 11) {
-        formattedPhone = '00' + formattedPhone;
-      }
-      if (!formattedPhone.startsWith('0041')) {
-        if (formattedPhone.startsWith('0') && !formattedPhone.startsWith('00')) {
-          formattedPhone = '0041' + formattedPhone.slice(1);
-        } else if (!formattedPhone.startsWith('00')) {
-          formattedPhone = '0041' + formattedPhone;
-        }
-      }
-    } else {
-      formattedPhone = "0000000000";
+    if (formattedPhone && formattedPhone.startsWith('+')) {
+      formattedPhone = '00' + formattedPhone.slice(1);
     }
 
-    
-        let finalPhone = (leadData.number || leadData.phone || "").replace(/[^0-9+]/g, '');
-        if (finalPhone && finalPhone.startsWith('+')) {
-            finalPhone = '00' + finalPhone.slice(1);
-        }
-        let countryName = leadData.countryCode ? leadData.countryCode.toLowerCase() : "ch";
+    let finalPhone = formattedPhone;
+    let countryName = req.body.countryCode ? req.body.countryCode.toLowerCase() : "ch";
 
-        const payload = {
+    const payload = {
       country_name: countryName,
       description: "Monde Quotidien",
       phone: finalPhone,
