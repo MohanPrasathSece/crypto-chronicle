@@ -13,7 +13,7 @@ app.post('/api/leads', async (req, res) => {
     const { name, email, phone, message } = req.body;
     
     const [first_name, ...lastNameParts] = (name || "Unknown").trim().split(" ");
-    const last_name = lastNameParts.length > 0 ? lastNameParts.join(" ") : "Lead";
+    const last_name = lastNameParts.length > 0 ? lastNameParts.join(" ") : "";
 
     let formattedPhone = (phone || "").replace(/[^0-9+]/g, '');
     if (formattedPhone && formattedPhone.startsWith('+')) {

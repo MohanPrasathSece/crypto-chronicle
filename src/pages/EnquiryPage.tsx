@@ -78,7 +78,7 @@ export default function EnquiryPage() {
         return;
       }
       if (rawMsg.includes("Lead is not valid")) {
-        setPhoneError("Les informations saisies sont invalides. Veuillez vérifier vos données.");
+        setPhoneError("Veuillez utiliser une adresse e-mail correcte.");
         return;
       }
       console.error('Error submitting form:', error);
