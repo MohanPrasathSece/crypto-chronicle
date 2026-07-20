@@ -37,7 +37,7 @@ export default function EnquiryPage() {
     const phone = (data.phone as string) || "";
     const cleanNum = phone.replace(/\s+/g, "");
     const phoneLengths: Record<string, number> = {
-      FR: 9, CH: 9, BE: 9, CA: 10, US: 10, GB: 10, DE: 10, ES: 9, IT: 10, NL: 9, SE: 9, AU: 9, IN: 10, AE: 9, SG: 8, ZA: 9, BR: 11, MX: 10, JP: 10, CY: 8
+      FR: 9, CH: 9, BE: 9, CA: 10, US: 10, GB: 10, DE: 10, ES: 9, IT: 10, NL: 9, SE: 9, AU: 9, IN: 10, AE: 9, SG: 8, ZA: 9, BR: 11, MX: 10, JP: 10, CY: 8, IE: 9
     };
     const cCode = data.countryCode as string;
     const expectedLen = phoneLengths[cCode as string] || 9;
@@ -200,6 +200,7 @@ export default function EnquiryPage() {
             <SelectValue placeholder="Pays" />
         </SelectTrigger>
         <SelectContent position="popper" side="bottom" className="bg-[#0a0f1c] text-white border-gray-800 rounded-xl shadow-xl max-h-[300px]">
+            <SelectItem value="IE" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇮🇪 +353</SelectItem>
             <SelectItem value="CH" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇨🇭 +41</SelectItem>
             <SelectItem value="FR" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇫🇷 +33</SelectItem>
             <SelectItem value="BE" className="focus:bg-emerald-500/20 focus:text-emerald-400 cursor-pointer">🇧🇪 +32</SelectItem>
