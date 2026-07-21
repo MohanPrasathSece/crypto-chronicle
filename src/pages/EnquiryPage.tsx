@@ -222,8 +222,7 @@ export default function EnquiryPage() {
                     transition={{ delay: 0.5 }}
                     className="text-gray-300 text-sm leading-relaxed text-center mb-6 px-2"
                   >
-                    Votre demande a bien été reçue. Un directeur de patrimoine dédié vous contactera dans les{" "}
-                    <span className="text-emerald-400 font-semibold">24 heures</span> pour organiser votre consultation confidentielle.
+                    Thank you for reaching out. Your enquiry has been successfully received. Our team will contact you shortly.
                   </motion.p>
 
                   {/* Info card */}
