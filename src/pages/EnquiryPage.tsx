@@ -166,18 +166,88 @@ export default function EnquiryPage() {
               </div>
 
               {isSuccess ? (
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12 relative z-10"
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="relative z-10 py-6"
                 >
-                  <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-10 h-10 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  {/* Animated checkmark circle */}
+                  <motion.div
+                    initial={{ scale: 0, rotate: -180 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0.1 }}
+                    className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 border border-emerald-500/40 flex items-center justify-center shadow-[0_0_30px_rgba(16,185,129,0.25)]"
+                  >
+                    <svg className="w-10 h-10 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                     </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Demande Reçue</h3>
-                  <p className="text-gray-400">Nos directeurs de patrimoine vous contacteront sous peu pour commencer votre consultation.</p>
+                  </motion.div>
+
+                  {/* Badge */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.25 }}
+                    className="flex justify-center mb-4"
+                  >
+                    <span className="inline-flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse inline-block"></span>
+                      Demande Confirmée
+                    </span>
+                  </motion.div>
+
+                  {/* Heading */}
+                  <motion.h3
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.35 }}
+                    className="text-2xl font-black text-white text-center mb-3"
+                  >
+                    Merci pour votre intérêt !
+                  </motion.h3>
+
+                  {/* Divider */}
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ delay: 0.45, duration: 0.5 }}
+                    className="w-16 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent mx-auto mb-4"
+                  />
+
+                  {/* Body message */}
+                  <motion.p
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="text-gray-300 text-sm leading-relaxed text-center mb-6 px-2"
+                  >
+                    Votre demande a bien été reçue. Un directeur de patrimoine dédié vous contactera dans les{" "}
+                    <span className="text-emerald-400 font-semibold">24 heures</span> pour organiser votre consultation confidentielle.
+                  </motion.p>
+
+                  {/* Info card */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="bg-[#030712] border border-gray-800 rounded-2xl p-4 space-y-3"
+                  >
+                    {[
+                      { icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", label: "Confirmation envoyée par e-mail" },
+                      { icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z", label: "Données traitées en toute sécurité" },
+                      { icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z", label: "Conseiller personnel assigné" },
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3">
+                        <div className="w-7 h-7 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                          <svg className="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon} />
+                          </svg>
+                        </div>
+                        <span className="text-gray-400 text-xs">{item.label}</span>
+                      </div>
+                    ))}
+                  </motion.div>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
